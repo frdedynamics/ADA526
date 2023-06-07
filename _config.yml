@@ -6,3 +6,16 @@ url: https://frdedynamics.github.io/ADA526
 
 aux_links:
   Page Repository: https://github.com/frdedynamics/ADA526
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+    
+  note:
+    title: Note
+    color: yellow
+    
+  tip:
+    title: Tip
+      color: blue
