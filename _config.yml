@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: ADA526 Applied Robot Prototyping
+description: Course material and documentation for ADA526 Applied Robot Prototyping.
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://frdedynamics.github.io/ADA526
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Page Repository: https://github.com/frdedynamics/ADA526
