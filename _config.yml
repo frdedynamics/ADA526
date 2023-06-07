@@ -8,8 +8,7 @@ url: https://frdedynamics.github.io/ADA526
 aux_links:
   Page Repository: https://github.com/frdedynamics/ADA526
   
-# Page logo and favicon 
-logo: "/assets/images/hvlRobotics_v_medium_white.png"
+# Page favicon 
 favicon_ico: "/assets/images/favicon.ico"
 
 # Callouts
