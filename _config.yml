@@ -8,12 +8,17 @@ aux_links:
   Page Repository: https://github.com/frdedynamics/ADA526
 
 callouts:
-  warning:
-    title: Warning
-    color: red    
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
   note:
     title: Note
-    color: yellow    
-  tip:
-    title: Tip
-    color: blue
+    color: purple
+  warning:
+    title: Warning
+    color: red
