@@ -10,12 +10,10 @@ aux_links:
 callouts:
   warning:
     title: Warning
-    color: red
-    
+    color: red    
   note:
     title: Note
-    color: yellow
-    
+    color: yellow    
   tip:
     title: Tip
       color: blue
