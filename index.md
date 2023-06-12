@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: home
+navorder: 1
 ---
 
 # Welcome to ADA526 - Applied Robot Prototyping
