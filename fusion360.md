@@ -1,7 +1,7 @@
 ---
 title: Fusion 360
 layout: default
-navorder: 4
+nav_order: 4
 ---
 
 # Fusion 360 Tutorials

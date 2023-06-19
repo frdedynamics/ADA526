@@ -1,7 +1,7 @@
 ---
 title: Project
 layout: default
-navorder: 2
+nav_order: 2
 ---
 
 # Project

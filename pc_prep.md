@@ -1,7 +1,7 @@
 ---
 title: Perparing Your PC
 layout: default
-navorder: 3
+nav_order: 3
 ---
 
 # Preparing Your PC
