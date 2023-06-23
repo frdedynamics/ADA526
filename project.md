@@ -28,13 +28,13 @@ We use Dynamixel X-series servo motors in the project.
 
  Each group gets a kit gets the following kit:
 
-| Qty | Description            |    
-| :-- | :--------------------- | 
-| 4   | [Dynamixel XM430-W350-T] |  
-| 1   | [Dynamixel XM540-W150-T] |  
+| Qty | Description                               |    
+| :-- | :---------------------------------------- | 
+| 4   | [Dynamixel XM430-W350-T]                  |  
+| 1   | [Dynamixel XM540-W150-T]                  |  
 | 1   | [U2D2 TTL to USB communication converter] |  
-| 1   | [U2D2 Power Hub] |
-| 1   | [12V 5A power supply] |
+| 1   | [U2D2 Power Hub]                          |
+| 1   | [12V 5A power supply]                     |
 
 [Dynamixel XM430-W350-T]: https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/
 [Dynamixel XM540-W150-T]: https://emanual.robotis.com/docs/en/dxl/x/xm540-w150/
