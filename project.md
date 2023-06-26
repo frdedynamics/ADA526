@@ -11,13 +11,18 @@ The project is central to ADA526. In the project you will perhaps learn the most
 ## Kinematic Structure
 You can choose one of three pre-defined kinematic structures. The relative orientations of the joints are fixed, but you should modify the link lengths and offsets such that your robot has sufficient reach.
 
+![config_1](../assets/images/config_1.png) ![config_1_param](../assets/images/config_1_params.png)
+
+*Kinematic Configuration 1: In the second image you can see the parameters you can change in the design process: the link lengths (green) and the link offsets (orange). The joint angles (blue) are used to control the robot during operation.*
 
 ### Denavit-Hartenbeg Parameters
 {: .d-inline-block }
 Optional
 {: .label .label-blue } 
 
-Denavit-Hartenberg (DH) parameters are what's behind the formal definition of the kinematic structure. The DH parameters are a set of four parameters for each joint that define the relative orientation and position of the joint axes. The DH parameters are defined as follows: 
+Denavit-Hartenberg (DH) parameters are what's behind the formal definition of the kinematic structure. For this project, we exposed only some of the parameters (link lengths and offsets) to keep things simple. Some parameters we kept fixed, such as the relative orientations of the joints.
+
+In general, DH parameters are a set of four parameters for each joint that define the relative orientation and position of the joint axes. The DH parameters are defined as follows: 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rA9tm0gTln8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
