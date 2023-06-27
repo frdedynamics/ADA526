@@ -11,7 +11,7 @@ The project is central to ADA526. In the project you will perhaps learn the most
 ## Kinematic Structure
 You can choose one of three pre-defined kinematic structures. The relative orientations of the joints are fixed, but you should modify the link lengths and offsets such that your robot has sufficient reach.
 
-![config1](assets/images/config.png) ![config_1_param](assets/images/config-1-params.png)
+![config1](assets/images/config_1.png) ![config_1_param](assets/images/config_1_params_zero.png)
 
 *Kinematic Configuration 1: In the second image you can see the parameters you can change in the design process: the link lengths (green) and the link offsets (orange). The joint angles (blue) are used to control the robot during operation.*
 
