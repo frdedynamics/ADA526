@@ -9,11 +9,24 @@ The project is central to ADA526. In the project you will perhaps learn the most
 
 
 ## Kinematic Structure
-You can choose one of three pre-defined kinematic structures. The relative orientations of the joints are fixed, but you should modify the link lengths and offsets such that your robot has sufficient reach.
+You can choose one of three pre-defined kinematic structures. The relative orientations of the joints are fixed, but you should modify the link lengths and offsets such that your robot has sufficient workspace.
 
-![A Config 1 Robot](assets/images/config_1.png) ![Robot Config 1 Parameters](assets/images/config_1_params_zero.png)
+### Configuration 1
+![A Config 1 Robot](../assets/images/config_1.png) ![Robot Config 1 Parameters](../assets/images/config_1_params_zero.png)
 
 *Kinematic Configuration 1: In the second image you can see the parameters you can change in the design process: the link lengths (green) and the link offsets (orange). The joint angles (blue) are used to control the robot during operation.*
+
+To figure out the parameters of your robot, you should use the `config_generator` in the design process. The `config_generator` is part of the [adatools] Python package. Look at the `examples` folder in the package to see how to use it. 
+```python
+my_conf1_robot = config_generator.get_robot_config_1(link1=0.3, link1_offset=0.0,
+                                                     link2=0.3, link2_offset=0.0,
+                                                     link3=0.3, link3_offset=0.0,
+                                                     link4=0.2, link4_offset=0.0)
+```
+You can modify the link lengths and offsets, plot the robot, and jog the robot to see if the robot's workspace covers the base plate and corresponds your design ideas.
+
+
+[adatools]: https://github.com/frdedynamics/adatools
 
 ### Denavit-Hartenbeg Parameters
 {: .d-inline-block }

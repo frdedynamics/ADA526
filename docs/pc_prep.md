@@ -1,16 +1,18 @@
 ---
-title: Perparing Your PC
+title: Preparing Your PC
 layout: default
 nav_order: 3
 ---
 
 # Preparing Your PC
-
+On your Windows PC:
 - Install [Fusion 360]
     - Create an Autodesk account with your HVL email and [verify your student status](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-verify-your-student-eligibility.html).
 - Install [Bambu Studio]
 - Install [VMWare Player]
     - Download our Ubuntu 20.04 [virtual machine] for VMWare Player with pre-installed ROS2, Robotics toolbox, Dynamixel Wizard and Dynamixel SDK
+        - On the Ubuntu VM, install the [adatools] Python package by following the instructions in the ReadMe on GitHub.
+
 
 
 
@@ -19,4 +21,4 @@ nav_order: 3
 [Bambu Studio]: https://bambulab.com/en/download/studio
 [VMWare Player]: https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1625&productId=1039&rPId=98562
 [virtual machine]: https://filesender.sikt.no/?s=download&token=b38ddcec-e3c8-4ef5-b39c-eee5df85b0e7
-
+[adatools]: https://github.com/frdedynamics/adatools
