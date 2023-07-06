@@ -33,3 +33,12 @@ Evolution has optimized the structure of bones to be as stiff as possible while 
 
 
 ## Designing Joints
+Some notes on the design of the joints.
+
+### First Joint
+The first joint of your robot, with a vertical rotation axis, has to suspend the weight of the entire robot which causes high torques perpendicular to the joint axis. To absorb these torques we use one or multiple [slewing bearings](https://en.wikipedia.org/wiki/Slewing_bearing) which are characterized by wide rings, and are commonly used to support heavy but slow-turning loads. In this course, we 3D-print our slewing bearings ourself!  
+We rely on this [excellent parametric design](https://www.instructables.com/Create-a-Parametric-3d-printable-Slew-Bearing-With/), which lets you modify the dimensions to fit your design.
+
+[Download Slewing Bearing](https://content.instructables.com/F7B/FGGK/J3OPQDLL/F7BFGGKJ3OPQDLL.f3d){: .btn .btn-blue}
+
+<iframe src="https://myhvl14.autodesk360.com/shares/public/SH512d4QTec90decfa6ebce8a17257a2b2f4?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
