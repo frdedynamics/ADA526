@@ -49,7 +49,7 @@ We use Dynamixel X-series servo motors in the project.
 
 ![x_series](https://emanual.robotis.com/assets/images/dxl/x/x_series_product.png)
 
- Each group gets a kit gets the following kit:
+ Each group gets the following kit:
 
 | Qty | Description                               |    
 | :-- | :---------------------------------------- | 
