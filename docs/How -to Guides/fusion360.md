@@ -1,7 +1,8 @@
 ---
 title: Fusion 360
 layout: default
-nav_order: 4
+parent: How-to Guides
+nav_order: 2
 ---
 
 # Fusion 360 Tutorials

@@ -1,7 +1,8 @@
 ---
 title: Preparing Your PC
 layout: default
-nav_order: 3
+parent: How-to Guides
+nav_order: 1
 ---
 
 # Preparing Your PC
