@@ -43,7 +43,8 @@ We use Dynamixel X-series servo motors in the project.
 
 
 ## Sensors
-We use the [Intel RealSense D435i] depth camera in the project. The camera can record depth and RGB images, and has an IMU. The camera is connected to the PC via USB 3.0.
+The Dynamixel motors have built-in encoders that we use to measure the joint angles for control. 
+In additon, we use [Intel RealSense D435i] depth cameras in the project. These cameras can record depth and RGB images, and have an IMU. The camera is connected to the PC via USB 3.0.
 For communication with the camera, we use the ROS2 wrapper of the [Intel RealSense SDK 2.0].
 
 ![d435i](https://www.intelrealsense.com/wp-content/uploads/2020/05/depth-camera-d435_details.jpg)
@@ -54,9 +55,11 @@ For communication with the camera, we use the ROS2 wrapper of the [Intel RealSen
 
 
 ## Software
-We use the [Robotics Toolbox for Python] in the project. The toolbox is a collection of Python modules that implement functions for robot kinematics, dynamics, and trajectory generation. The toolbox is based on the Robotics Toolbox for MATLAB by Peter Corke.
+We use the [Robotics Toolbox for Python] by Peter Corke. The toolbox is a collection of Python modules that implement functions for robot kinematics, dynamics, and trajectory generation.
 We will use the toolbox in the design phase to asses the kinematic structure (link lengths etc.) of the robot, and when controlling the robot to implement the inverse kinematics and trajectory generation.
+For the underlying math, to represent, plot and manipulate position and orientation of objects, the toolbox makes use of the [Spatial Math] package.
 For control, we will integrate the toolbox with [ROS2 Foxy Fitzroy] by importing it in our ROS nodes.
 
 [Robotics Toolbox for Python]:https://petercorke.github.io/robotics-toolbox-python/index.html
+[Spatial Math]:https://bdaiinstitute.github.io/spatialmath-python/index.html
 [ROS2 Foxy Fitzroy]:https://docs.ros.org/en/foxy/Tutorials.html
