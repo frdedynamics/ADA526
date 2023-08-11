@@ -19,7 +19,8 @@ Joints are crucial for defining the relative positions and motions of components
 ## Export for 3D-printing
 To 3D-print a part we must export it as a mesh in form of a .stl-file. [Export for 3D-printing](https://www.autodesk.com/certification/learn/module/exporting-for-3d-printing)
 
-
+## Parametric sketching
+Parametric sketching is a powerful tool to create modifiable and reusable designs. It can save you hours when you need to make changes to a complex design. [Parametric sketching](https://www.autodesk.com/certification/learn/module/fusion360-intro-to-3d-modeling-associate-parametric-modeling-in-fusion-360:-sketching)
 
 # Beginner Course
 Following [this course](https://help.autodesk.com/view/fusion360/ENU/courses/) can also be an option to get started.
