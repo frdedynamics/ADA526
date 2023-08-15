@@ -6,7 +6,10 @@ nav_order: 1
 
 # Project
 The project is central to ADA526. In the project you will perhaps learn the most and have the most fun!
+In the project you will design and build a robot arm from scratch, and implement basic control algorithms to control the arm based on sensor inputs. Both parts, making the robot and controlling it are important.
+Your robots will be used in a competition at the end of the semester, where the robots will compete in a task that requires both good design and good control.
 
+During summer 2023, two bachelor students tested the project 
 
 ## Base Plate
 Each group gets a standardized base plate for mounting the robot on. The mounting holes for the robot are in a 150mm square pattern, M6 screws will be inserted from the bottom of the plate. The plate will also be used as the arena for the competition at the end of the semester. Therefore, it is important that the robot can reach all the corners of the plate.
