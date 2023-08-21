@@ -7,6 +7,7 @@ nav_order: 1
 
 # Preparing Your PC
 On your Windows PC:
+- Create a GitHub account if you don't have one. [Apply for GitHub Global Campus](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-students/apply-to-github-global-campus-as-a-student) to access GitHub Pro features such as Copilot and more.
 - Install [Fusion 360]
     - Create an Autodesk account with your HVL email and [verify your student status](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-verify-your-student-eligibility.html).
 - Install [Bambu Studio]
