@@ -34,7 +34,15 @@ In this challenge we test your robot's capabilities of vision-based control and 
  - The tip on the end effector must reach the first target. Time is taken. The tip must then reach the second target. Time is taken. The time between the two targets is used to calculate the score.
  - The robot must neither be touched nor manually controlled during the trials. 
 
+
 ### Challenge 3: Strength
+This challenges tests the physical strength of your robot. We will provide an end effector to which increasing payloads can be attached. The goal is to lift the payload at a distance of 45cm from the robot's base above a height of 15cm and hold it there for 5 seconds. The groups can decide how much weight they want to try to lift. Each group can freeze the payload they lifted successfully three times. At the end the highest frozen payload counts, and the group with the highest frozen payloads wins.
+A lift counts as failed if the payload is not lifted and held above the required height for the required time, if a motor overloads, if any part of the robot except its base touches the base plate or if the robot is touched by hand. This challenge has no requirements regarding the control of the robot. You can use any control strategy you want, including manual control/teleoperation. 
+ - Each group announces a starting payload $$\geq 0$$g in advance.
+ - One group is picket at random to start.
+ - The group tries to lift their announced pay load. If they succeed, they can decide to freeze the payload, or they can risk it and announce a higher payload without freezing, saving a freeze for later. Repeat until the group has used up all three freezes or fails to lift the announced payload.
+ - The next group is picked at random and the process repeats.
+ - The group with the highest frozen payload wins.
 
 
 ## Base Plate
