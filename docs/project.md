@@ -94,12 +94,14 @@ For communication with the camera, we use the ROS2 wrapper of the [Intel RealSen
 We use the [Robotics Toolbox for Python] by Peter Corke. The toolbox is a collection of Python modules that implement functions for robot kinematics, dynamics, and trajectory generation.
 We will use the toolbox in the design phase to asses the kinematic structure (link lengths etc.) of the robot, and when controlling the robot to implement the inverse kinematics and trajectory generation.
 For the underlying math, to represent, plot and manipulate position and orientation of objects, the toolbox makes use of the [Spatial Math] package.
+To simplify some of the rich functionality of the robotics toolbox, we provide [adatools], a collection of convenience functions and examples.
 For control, we will integrate the toolbox with [ROS2 Foxy Fitzroy] by importing it in our ROS nodes. 
 Camera data will be streamed into the ROS network and used generate commands for the motors.
 
 [Robotics Toolbox for Python]:https://petercorke.github.io/robotics-toolbox-python/index.html
 [Spatial Math]:https://bdaiinstitute.github.io/spatialmath-python/index.html
 [ROS2 Foxy Fitzroy]:https://docs.ros.org/en/foxy/Tutorials.html
+[adatools]:https://github.com/frdedynamics/adatools
 
 
 <!--Mention robot_from_dh ? -->
