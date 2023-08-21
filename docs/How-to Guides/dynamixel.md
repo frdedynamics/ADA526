@@ -62,3 +62,7 @@ To Do: Minimal example & link to adatools.
 To Do: Minimal example
 
 
+## Assembling and Mounting
+Make sure to read the section [How-to Assemble](https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/#how-to-assemble) carefully!
+Make sure you use screws of correct size and length. **Do not tighten screws deeper than 3mm into the side tabs on the motor.**  
+When mounting stuff to the servo horn, make sure the screws do not touch the motor housing.

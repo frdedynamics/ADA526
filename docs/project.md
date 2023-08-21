@@ -80,10 +80,13 @@ We use Dynamixel X-series servo motors in the project.
 
 ## Sensors
 The Dynamixel motors have built-in encoders that we use to measure the joint angles for control. 
-In additon, we use [Intel RealSense D435i] depth cameras in the project. These cameras can record depth and RGB images, and have an IMU. The camera is connected to the PC via USB 3.0.
+In addition, we use [Intel RealSense D435i] depth cameras in the project. These cameras can record depth and RGB images, and have an integrated IMU. The camera is connected to the PC via USB 3.0.
 For communication with the camera, we use the ROS2 wrapper of the [Intel RealSense SDK 2.0].
 
 ![d435i](https://www.intelrealsense.com/wp-content/uploads/2020/05/depth-camera-d435_details.jpg)
+
+Example of a point cloud with overlayed RGB colors recorded with a RealSense camera in ROS:
+![point_cloud](https://user-images.githubusercontent.com/17433152/35396613-ddcb1d6c-01f5-11e8-8887-4debf178d0cc.gif)
 
 
 [Intel RealSense D435i]: https://www.intelrealsense.com/depth-camera-d435i/
@@ -102,6 +105,10 @@ Camera data will be streamed into the ROS network and used generate commands for
 [Spatial Math]:https://bdaiinstitute.github.io/spatialmath-python/index.html
 [ROS2 Foxy Fitzroy]:https://docs.ros.org/en/foxy/Tutorials.html
 [adatools]:https://github.com/frdedynamics/adatools
-
-
 <!--Mention robot_from_dh ? -->
+
+## System Architecture
+The central hub for data processing is your own PC running a virtual machine with Ubuntu 20.04. Motors and cameras are connected to your PC, or rather the VM, by USB. Sensor inputs and motor commands as well as computer vision data are exchanged via the ROS2 middleware. 
+Just Fusion 360 for CAD and Bambu Studio for preparing 3D-prints are running on your host system.
+
+![System Architecture](../assets/images/system_architecture.png)
