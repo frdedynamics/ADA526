@@ -7,7 +7,34 @@ nav_order: 1
 # Project
 The project is central to ADA526. In the project you will perhaps learn the most and have the most fun!
 In the project you will design and build a robot arm from scratch, and implement basic control algorithms to control the arm based on sensor inputs. Both parts, making the robot and controlling it are important.
-Your robots will be used in a competition at the end of the semester, where the robots will compete in a task that requires both good design and good control.
+Your robots will take part in a competition at the end of the semester, where the tasks require both good design and good control.
+
+## Competition
+At the end of semester, we want to organize a showcase and competition. Each group gets the chance to present their robot and then competes in three challenges.
+The challenges focus on different qualities of your robot. You will collect points in each challenge, and the total sum of points collected will determine the winner. There is no minimum number of points you need to reach in each challenges - it is up to you if you want to be strategic and specialize your robot design towards a subset of the challenges, or if you want to build an all-round robot that can perform well in all challenges. 
+
+### Challenge 1: Precision and Accuracy
+This challenge is about testing the precision and accuracy of your robot. We will provide fixtures for replaceable paper targets that fit into the mounting holes on the base plate. We will also provide a pen holder to be mounted to the end effector of your robot. The pen holder has an attachment for small pay loads. The goal is to make five dots with the pen at the center of the target, while small payloads are added to the end effector in between the trials. The distribution of the dots around the center of the target (distance of mean to center, and standard deviation) will be used to calculate the score. We may define a (rather generous) time limit per group. This challenge is not about speed, but we want to prevent tinkering during the trials.
+ - In advance: Each group must define a home pose for their robot which can't be changed after the target coordinates are announced.
+ - The target coordinates and the payloads are announced. The order of the payloads for each trial is randomized.
+ - The groups perform the challenge one after another. 5 trials per group.
+ - Each trial starts from and ends at the defined home pose.
+ - The robot must neither be touched nor manually controlled during the trials.
+ - The score is calculated based on distance of mean to center and standard deviation. If the marking is not just a dot, the point of the parking with the greatest distance to the center is used for the calculation.
+
+![Accuracy vs. precision](../assets/images/accuracy-vs-precision.jpg)
+
+
+### Challenge 2: Vision, Control and Speed
+In this challenge we test your robot's capabilities of vision-based control and dynamic movements. We will provide two targets that can easily tracked by camera (e.g. a red ball and a green ball) which fit into the mounting holes in the base plate, and an end effector with a tip that must touch the targets. The goal is to identify the location of the targets with the camera, to then move the tip of the end effector from one target to the other as fast as possible. The time between the two targets is measured and used to calculate a score. Three different locations of the targets are used, and the order of the targets is randomized. The coordinates will not be announced in advance -- you have to use the camera to identify their location.
+ - In advance: Each group must define a home pose for their robot which can't be changed after the first targets are placed.
+ - The groups perform the challenge one after another. One trial for each of the three target locations per group.
+ - The targets are placed on the base plate. The order of the targets is randomized.
+ - Each trial starts from the defined home pose.
+ - The tip on the end effector must reach the first target. Time is taken. The tip must then reach the second target. Time is taken. The time between the two targets is used to calculate the score.
+ - The robot must neither be touched nor manually controlled during the trials. 
+
+### Challenge 3: Strength
 
 
 ## Base Plate
@@ -16,10 +43,9 @@ Each group gets a standardized base plate for mounting the robot on. The mountin
 
 
 ## Kinematic Structure
-You can choose one of three pre-defined kinematic structures. The relative orientations of the joints are fixed, but you should modify the link lengths and offsets such that your robot has sufficient workspace.
-You find more detailed information about the kinematic structures in the [How-to Guides: Kinematic Structure](../docs/how-to guides/kinematic_structure.html).
+The kinematic structure of the robot is pre-defined. This means, the number of joints and the relative orientations of the joint axes are fixed, but you have to modify the link lengths and offsets such that your robot's workspace more or less covers the base plate.
+You find more detailed information about kinematic structures in the [How-to Guides: Kinematic Structure](../docs/how-to guides/kinematic_structure.html).
 
-### Configuration 1
 ![A Config 1 Robot](../assets/images/config_1.png)
 
 ## Actuators
@@ -60,7 +86,8 @@ For communication with the camera, we use the ROS2 wrapper of the [Intel RealSen
 We use the [Robotics Toolbox for Python] by Peter Corke. The toolbox is a collection of Python modules that implement functions for robot kinematics, dynamics, and trajectory generation.
 We will use the toolbox in the design phase to asses the kinematic structure (link lengths etc.) of the robot, and when controlling the robot to implement the inverse kinematics and trajectory generation.
 For the underlying math, to represent, plot and manipulate position and orientation of objects, the toolbox makes use of the [Spatial Math] package.
-For control, we will integrate the toolbox with [ROS2 Foxy Fitzroy] by importing it in our ROS nodes.
+For control, we will integrate the toolbox with [ROS2 Foxy Fitzroy] by importing it in our ROS nodes. 
+Camera data will be streamed into the ROS network and used generate commands for the motors.
 
 [Robotics Toolbox for Python]:https://petercorke.github.io/robotics-toolbox-python/index.html
 [Spatial Math]:https://bdaiinstitute.github.io/spatialmath-python/index.html
