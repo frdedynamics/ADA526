@@ -7,7 +7,7 @@ nav_order: 2
 
 # Fusion 360 
 Fusion 360 is a computer-aided design (CAD) software developed by Autodesk. We are going to use it to create the mechanical design of our robot arms and to design the parts we are going to 3D-print.
-![Fusion 360](../../../assets/images/fusion360.png)
+![Fusion 360](../../assets/images/fusion360.png)
 ## Tutorials
 Autodesk has a good [collection of online tutorials](https://www.autodesk.com/certification/learn/catalog/product/Fusion%20360) that help us to master most of the important functionalities in Fusion 360.
 
