@@ -16,6 +16,9 @@ Here are some tutorials that we think are particularly useful for this course:
 ### Getting started
 Very much recommended crash course to get started: [Learn Fusion 360 in 90 Minutes](https://www.autodesk.com/certification/learn/course/learn-fusion-360-in-90-minutes)
 
+### Invite People to a Project
+You should collaborate on your CAD designs. Here is how you [invite people to Fusion 360 Projects](https://help.autodesk.com/view/fusion360/ENU/?guid=GUID-0A59E67F-DC97-4256-A011-6E0A11FB22CF).
+
 ### Joints in Assemblies
 Joints are crucial for defining the relative positions and motions of components in an assembly. [Assembling components with joints](https://www.autodesk.com/certification/learn/module/assembling-components-with-joints)
 
