@@ -1,7 +1,7 @@
 ---
 title: Kinematic Structure
 layout: default
-nav_order: 3
+nav_order: 4
 parent: How-to Guides
 ---
 

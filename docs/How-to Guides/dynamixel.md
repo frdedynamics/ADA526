@@ -2,7 +2,7 @@
 layout: default
 title: Dynamixel Motors
 parent: How-to Guides
-nav_order: 5
+nav_order: 6
 has_toc: true
 ---
 

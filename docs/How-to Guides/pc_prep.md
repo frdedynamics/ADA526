@@ -22,5 +22,5 @@ On your Windows PC:
 [Fusion 360]: https://www.autodesk.com/education/edu-software/overview?sorting=featured&filters=individual#card-f360
 [Bambu Studio]: https://bambulab.com/en/download/studio
 [VMWare Player]: https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1625&productId=1039&rPId=98562
-[virtual machine]: https://filesender.sikt.no/?s=download&token=b38ddcec-e3c8-4ef5-b39c-eee5df85b0e7
+[virtual machine]: https://drive.google.com/file/d/15QU57vWVVieqcQ1c6Yy_SgfXyAmGCMJW/view?usp=sharing
 [adatools]: https://github.com/frdedynamics/adatools

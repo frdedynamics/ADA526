@@ -2,7 +2,7 @@
 title: Mechanical Design
 layout: default
 parent: How-to Guides
-nav_order: 4
+nav_order: 5
 ---
 
 # Mechanical Design
