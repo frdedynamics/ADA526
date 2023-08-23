@@ -13,6 +13,7 @@ On your Windows PC:
 - Install [Bambu Studio]
 - Install [VMWare Player]
     - Download our Ubuntu 20.04 [virtual machine] for VMWare Player with pre-installed ROS2, Robotics toolbox, Dynamixel Wizard and Dynamixel SDK
+        - The user password on the VM is `student`
         - On the Ubuntu VM, install the [adatools] Python package by following the instructions in the ReadMe on GitHub.
 
 
