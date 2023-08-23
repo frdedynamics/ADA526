@@ -12,9 +12,26 @@ On your Windows PC:
     - Create an Autodesk account with your HVL email and [verify your student status](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-verify-your-student-eligibility.html).
 - Install [Bambu Studio]
 - Install [VMWare Player]
-    - Download our Ubuntu 20.04 [virtual machine] for VMWare Player with pre-installed ROS2, Robotics toolbox, Dynamixel Wizard and Dynamixel SDK
-        - The user password on the VM is `student`
-        - On the Ubuntu VM, install the [adatools] Python package by following the instructions in the ReadMe on GitHub.
+    - Download our Ubuntu 20.04 [virtual machine] for VMWare Player with pre-installed VSCode, ROS2, Robotics toolbox, Dynamixel Wizard and Dynamixel SDK.
+    - Unzip the virtual machine to a folder of your choice.
+    - In the VMWare Player, open the virtual machine `ctrl+O` by selecting the `.vmx` file in the folder you unzipped the virtual machine to.
+    - Start the virtual machine by clicking `Play virtual machine`.
+
+## On the Virtual Machine
+The user password on the VM is `student`.  Here are some things you should do on the VM to get started:
+
+### Configure Git and GitHub
+- Set your Git credentials by opening a terminal and typing  
+```bash
+git config --global user.name "Your user name"
+git config --global user.email "Your email address"
+```  
+with your user name and **email address you use on github.com**.
+- Open VSCode (pre-installed) and install the [GitHub Pull Requests and Issues](vscode:extension/GitHub.vscode-pull-request-github) extension.
+    - A new GitHub icon appears in the left sidebar. Click it and sign in with your GitHub account.
+    
+### Install adatools
+- Install the [adatools] Python package by following the instructions in the ReadMe on GitHub.
 
 
 
