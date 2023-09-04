@@ -66,3 +66,5 @@ To Do: Minimal example
 Make sure to read the section [How-to Assemble](https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/#how-to-assemble) carefully!
 Make sure you use screws of correct size and length. **Do not tighten screws deeper than 3mm into the side tabs on the motor.**  
 When mounting stuff to the servo horn, make sure the screws do not touch the motor housing.
+
+The technical drawings of the motors as well as CAD-models, can be found in the [Drawings](https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/#drawings) section. For importing the CAD files, download the ```.stp```- file and upload it into your Fusion project.
