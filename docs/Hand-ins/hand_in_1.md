@@ -30,7 +30,7 @@ The technical drawings of the motors as well as CAD-models, can be found in the 
 Remember that your base can consist of multiple parts. 
 
 <p float="center">
-  <img src="/../../assets/images/example_base.png" width="330" />
+  <img src="../../assets/images/example_base.png" width="330" />
   <img src="../../assets/images/example_base_2.png" width="330" /> 
 </p>
  _Examples of base designs. Feel free to completely deviate from them._
