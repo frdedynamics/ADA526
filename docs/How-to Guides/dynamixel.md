@@ -56,7 +56,7 @@ Time to make the motors move! Activate the torque, either by setting control tab
 
 
 ## Dynamixel SDK
-To Do: Minimal example & link to adatools.
+You can find a small example of how to send and read data to the servos in ```adatools/examples```.
 
 ### Dynamixel SDK in ROS2
 To Do: Minimal example
