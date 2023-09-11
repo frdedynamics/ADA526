@@ -38,7 +38,7 @@ Remember that your base can consist of multiple parts.
 
 ## Deliverables
 You have to submit:
-- .f3z file of your Fusion project (in Fusion: ```File > Export > *.f3z```)
+- .f3z file of your Fusion project (in Fusion: ```File > Export > *.f3d```)
 - .3mf file of your Bambu Studio slicer project (in Bambu Studio: ```File > Save Project As...```)
 - one din4 page where you reflect your design process (**max. 300 words**). For example, describe the idea behind your design and how you did get from constraints to finished design, considerations you made, things you learned underway. Include a screenshot of your design in Fusion, and a photo of the 3D printed base with the motor sitting in its attachment. Submit the page in .pdf format.
 
