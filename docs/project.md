@@ -47,9 +47,8 @@ A lift counts as failed if the payload is not lifted and held above the required
 
 ## Base Plate
 Each group gets a standardized base plate for mounting the robot on. The mounting holes for the robot are in a 150mm square pattern, M6 screws will be inserted from the bottom of the plate. The plate will also be used as the arena for the competition at the end of the semester. Therefore, it is important that the robot can reach all the corners of the plate.  
-[Download Base Plate](https://a360.co/3r8Vwxc){: .btn .btn-blue}
-<iframe src="https://myhvl14.autodesk360.com/shares/public/SH512d4QTec90decfa6e5fab6acd7b1201ea?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
-
+[Download Base Plate](https://a360.co/45MN0mZ){: .btn .btn-blue}
+<iframe src="https://myhvl14.autodesk360.com/shares/public/SH512d4QTec90decfa6e3b9f03e7d311b26e?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
 
 ## Kinematic Structure
 The kinematic structure of the robot is pre-defined. This means, the number of joints and the relative orientations of the joint axes are fixed, but you have to modify the link lengths and offsets such that your robot's workspace more or less covers the base plate.
