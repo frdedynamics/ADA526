@@ -27,5 +27,5 @@ Frikk Fossdal has his own website for ADA525 where he has information on 3D prin
 We have mostly PLA in stock. If you want to use other materials, please contact staff.
 
 ## Where to find the printers
-Bergen: Room D425  
+Bergen: Room D415/D425  
 Førde: Robotics lab/experiment room next to the lab
