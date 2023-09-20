@@ -2,12 +2,36 @@
 title: Project
 layout: default
 nav_order: 2
+has_toc: true
 ---
 
 # Project
+{: .no_toc }
+
+#### Table of contents
+{: .no_toc .text-delta }
+1. TOC
+{:toc}
+---
 The project is central to ADA526. In the project you will perhaps learn the most and have the most fun!
 In the project you will design and build a robot arm from scratch, and implement basic control algorithms to control the arm based on sensor inputs. Both parts, making the robot and controlling it are important.
 Your robots will take part in a competition at the end of the semester, where the tasks require both good design and good control.
+
+## Preliminary Design Review (PDR)
+During the PDR, you'll have the opportunity to present your work so far and receive constructive feedback. But remember, the atmosphere should be informal, constructive, and, most importantly, fun! We want to foster an engaging environment where everyone can actively participate and learn from each other.
+
+The PDR should primarily focus on the content covered in modules 1 and 2 of our course, as these provide the foundational knowledge for your robot prototypes. While we don't expect a final robot design at this stage, we expect content along lines of:
+- Basic kinematic structure (lengths, offsets etc) 
+- Any joint designs 
+- Any link designs 
+- Selection of materials/structures 
+- Design should be supported by basic calculations 
+- Design should relate to requirements for competition 
+
+For a more hands-on approach, each group is required to bring at least one physical joint and link pair to demonstrate your hardware progress. We also strongly recommend showcasing any other physical hardware you've constructed and incorporating images and videos of tests you've conducted.
+Your presentations will follow a concise 5-minute Powerpoint format, followed by a question and answer session. It's crucial that every member of your group actively participates in both presenting your progress and answering questions.
+Furthermore, don't hesitate to ask questions of your own. We encourage inquiries from other student groups. This collaborative approach not only enriches your knowledge but also promotes a supportive atmosphere where innovative ideas can flourish.
+
 
 ## Competition
 At the end of semester, we want to organize a showcase and competition. Each group gets the chance to present their robot and then competes in three challenges.
