@@ -32,8 +32,14 @@ Parametric sketching is a powerful tool to create modifiable and reusable design
 Following [this course](https://help.autodesk.com/view/fusion360/ENU/courses/) can also be an option to get started.
 
 ## Add-ins
-Fusion 360 has a lot of useful add-ins that can be installed. Here are some for making gears:
+Fusion 360 has a lot of useful add-ins that can be installed.  
+Here are some for making gears:
+
 - [GF Gear Generator](https://apps.autodesk.com/FUSION/en/Detail/Index?id=1236778940008086660&appLang=en&os=Win64)
 - [Helical Gear](https://apps.autodesk.com/FUSION/en/Detail/Index?id=9029586664984391977&os=Win64&appLang=en)
 
+![Gear](../../assets/images/gear_example.png){: width="35%"}
+
 For making pulleys we did not find an add-in, but you could use [this parametric design](https://grabcad.com/library/parametric-gt2-pulley-1).
+
+![Pulley](../../assets/images/pulley_example.png){: width="35%"}
