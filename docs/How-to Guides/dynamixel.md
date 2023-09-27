@@ -56,6 +56,8 @@ Time to make the motors move! Activate the torque, either by setting control tab
 
 
 ## Dynamixel SDK
+[Documentation Dynamixel SDK](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/api_reference/python/python_porthandler/#python){: .btn .btn-blue}
+
 You can find a small example of how to send and read data to the servos in ```adatools/examples```.
 
 ### Dynamixel SDK in ROS2
