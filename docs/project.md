@@ -32,6 +32,12 @@ For a more hands-on approach, each group is required to bring at least one physi
 Your presentations will follow a concise 5-minute Powerpoint format, followed by a question and answer session. It's crucial that every member of your group actively participates in both presenting your progress and answering questions.
 Furthermore, don't hesitate to ask questions of your own. We encourage inquiries from other student groups. This collaborative approach not only enriches your knowledge but also promotes a supportive atmosphere where innovative ideas can flourish.
 
+## Critical Design Review (CDR)
+The CDR has the same format as the PDR, but we expect a more advanced design of your robot. You can present on all of the content listed for the PDR and in addition we expect:
+- A physical prototype of your robot arm that moves
+- A RealSense camera mounted to the robot or set-up, streaming data into the ROS network
+
+## Report
 
 ## Competition
 At the end of semester, we want to organize a showcase and competition. Each group gets the chance to present their robot and then competes in three challenges.
