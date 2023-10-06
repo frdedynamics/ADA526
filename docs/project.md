@@ -33,11 +33,58 @@ Your presentations will follow a concise 5-minute Powerpoint format, followed by
 Furthermore, don't hesitate to ask questions of your own. We encourage inquiries from other student groups. This collaborative approach not only enriches your knowledge but also promotes a supportive atmosphere where innovative ideas can flourish.
 
 ## Critical Design Review (CDR)
-The CDR has the same format as the [PDR](#preliminary-design-review-pdr), but we expect a more advanced design of your robot. You can present on all of the content listed for the [PDR](#preliminary-design-review-pdr) and in addition we expect:
+The CDR has the same format as the [PDR](#preliminary-design-review-pdr), but we expect a more advanced design of your robot. You can present on all of the content listed for the [PDR](#preliminary-design-review-pdr), but in addition we expect:
 - A physical prototype of your robot arm that moves
 - A RealSense camera mounted to the robot or set-up, streaming data into the ROS network
 
-## Report
+## Report Requirements
+The report should contain extensive and well-explained figures, but also links to supplementary material supporting your project. 
+
+You should link to the GitHub repository for the project (https://github.com), where you should share code and other material that helps document your project fully. Please also include the final version of your Fusion 360 design in the repository, as a .f3z file.
+
+Good-quality videos, for example shared on YouTube (private or public), are required to document the design process and experiments with the robot arms, and should be linked to from the report.
+
+Please note that you are yourself responsible for not publishing copyrighted or illegal material on such channels, and you are advised to only include content you yourself have produced, or material that is under a suitable open source license, and where you have given suitable attribution. 
+
+You are free to make your repository public, if you want. However, suggest to include an open source license if you make it public. For more information on for example the Creative Commons open source licences: https://creativecommons.org
+
+**The report assignment should be submitted as a group, and as a single pdf document.** Please note that the report will be submitted on WiseFlow, and that there will be a plagiarism check. **In addition, each group should submit a .zip file containing the last version of their GitHub repository on Wiseflow.**
+
+### Structure and Content
+The report should be 3000 words plus/minus 10%. The report should contain the following sections and suggested content (as a minimum):
+
+1.	Introduction
+    - Brief introduction to the project and requirements
+    - An overview of your approach to the robot design and control strategy
+2.	Design Process
+    - What design iterations have you gone through?
+    - Who worked on what, and when?
+    - What problems did you encounter, and how did you solve them?
+3.	Implementation
+    - Describe the final design of your robot arm
+    - Include figures with images/drawings etc
+    - Include your calculations on structural analysis, kinematics, mechanics etc
+    - Include diagrams of your approach to software, vision and control
+    - Be brief, include support material in appendices, if need be
+4.	Experiments 
+    - What testing have you performed of the robot (or subsystems)
+    - How well have you been able to perform the different challenges during the development process?
+    - Use videos, images and data (tables, plots etc) to show the results of the experiments in the report
+5.	Discussion and Conclusion
+    - Briefly discuss the design of the robot, the results obtained, and the design process followed
+    - Critically evaluate any flaws in the design, and how could be improved upon
+
+### References
+- Here you should put a numbered list of references to all sources you have used in the report, using IEEE referencing style
+- These references should be cited from the text, using the IEEE citation format with citation number in square brackets, e.g. [3] for the third reference in the list
+- For guidance on the IEEE referencing style, see for example: https://www.bath.ac.uk/publications/library-guides-to-citing-referencing/attachments/ieee-style-guide.pdf
+
+### Appendices
+- Include here the 3 presentations made for the PDR, CDR and final presentations. 
+- Also include here a log of what each group member worked on during the project, in terms of theory, code, design, presentations, and report writing. All members of the group have to sign this log.
+
+### Template
+**Template will be uploaded soon**
 
 ## Competition
 At the end of semester, we want to organize a showcase and competition. Each group gets the chance to present their robot and then competes in three challenges.
