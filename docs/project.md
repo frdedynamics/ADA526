@@ -33,7 +33,7 @@ Your presentations will follow a concise 5-minute Powerpoint format, followed by
 Furthermore, don't hesitate to ask questions of your own. We encourage inquiries from other student groups. This collaborative approach not only enriches your knowledge but also promotes a supportive atmosphere where innovative ideas can flourish.
 
 ## Critical Design Review (CDR)
-The CDR has the same format as the PDR, but we expect a more advanced design of your robot. You can present on all of the content listed for the PDR and in addition we expect:
+The CDR has the same format as the [PDR](#preliminary-design-review-pdr), but we expect a more advanced design of your robot. You can present on all of the content listed for the [PDR](#preliminary-design-review-pdr) and in addition we expect:
 - A physical prototype of your robot arm that moves
 - A RealSense camera mounted to the robot or set-up, streaming data into the ROS network
 
