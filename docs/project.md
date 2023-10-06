@@ -84,7 +84,7 @@ The report should be 3000 words plus/minus 10%. The report should contain the fo
 - Also include here a log of what each group member worked on during the project, in terms of theory, code, design, presentations, and report writing. All members of the group have to sign this log.
 
 ### Template
-**Template will be uploaded soon**
+**Template will be uploaded here soon**
 
 ## Competition
 At the end of semester, we want to organize a showcase and competition. Each group gets the chance to present their robot and then competes in three challenges.
