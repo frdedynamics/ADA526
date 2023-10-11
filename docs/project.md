@@ -40,13 +40,13 @@ The CDR has the same format as the [PDR](#preliminary-design-review-pdr), but we
 ## Report Requirements
 The report should contain extensive and well-explained figures, but also links to supplementary material supporting your project. 
 
-You should link to the GitHub repository for the project (https://github.com), where you should share code and other material that helps document your project fully. Please also include the final version of your Fusion 360 design in the repository, as a .f3z file.
+You should link to the [GitHub](https://github.com) repository for the project, where you should share code and other material that helps document your project fully. Please also include the final version of your Fusion 360 design in the repository, as a .f3z file.
 
 Good-quality videos, for example shared on YouTube (private or public), are required to document the design process and experiments with the robot arms, and should be linked to from the report.
 
 Please note that you are yourself responsible for not publishing copyrighted or illegal material on such channels, and you are advised to only include content you yourself have produced, or material that is under a suitable open source license, and where you have given suitable attribution. 
 
-You are free to make your repository public, if you want. However, suggest to include an open source license if you make it public. For more information on for example the Creative Commons open source licences: https://creativecommons.org
+You are free to make your repository public, if you want. However, suggest to include an open source license if you make it public. For more information on for example the Creative Commons open source licences: [https://creativecommons.org](https://creativecommons.org)
 
 **The report assignment should be submitted as a group, and as a single pdf document.** Please note that the report will be submitted on WiseFlow, and that there will be a plagiarism check. **In addition, each group should submit a .zip file containing the last version of their GitHub repository on Wiseflow.**
 
@@ -77,7 +77,7 @@ The report should be 3000 words plus/minus 10%. The report should contain the fo
 ### References
 - Here you should put a numbered list of references to all sources you have used in the report, using IEEE referencing style
 - These references should be cited from the text, using the IEEE citation format with citation number in square brackets, e.g. [3] for the third reference in the list
-- For guidance on the IEEE referencing style, see for example: https://www.bath.ac.uk/publications/library-guides-to-citing-referencing/attachments/ieee-style-guide.pdf
+- For guidance on the IEEE referencing style, see [here](https://www.bath.ac.uk/publications/library-guides-to-citing-referencing/attachments/ieee-style-guide.pdf) 
 
 ### Appendices
 - Include here the 3 presentations made for the PDR, CDR and final presentations. 
