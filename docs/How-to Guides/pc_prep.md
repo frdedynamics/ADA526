@@ -33,7 +33,20 @@ with your user name and **email address you use on github.com**.
 ### Install adatools
 - Install the [adatools] Python package by following the instructions in the ReadMe on GitHub.
 
-
+### RealSense Camera
+- Install the kernel drivers package  
+```sudo apt-get install librealsense2-dkms```
+- Install the [vision_opencv package](https://github.com/ros-perception/vision_opencv/tree/foxy)
+```bash
+    cd ros2_ws/src
+    git clone https://github.com/ros-perception/vision_opencv.git -b foxy
+    cd ..
+    colcon build --symlink-install
+```
+- Install the [machine vision toolbox](https://github.com/petercorke/machinevision-toolbox-python) for Python from Peter Corke  
+```pip install machinevision-toolbox-python```
+- For all plotting functions of the vision toolbox to work, you most likely need to upgrade ```matplotlib```  
+```pip install --upgrade matplotlib```
 
 
 
