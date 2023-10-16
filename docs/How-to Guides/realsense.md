@@ -78,3 +78,6 @@ If the output is ```False```, run
 ros2 param set /camera/camera pointcloud.enable true
 ```
 Now you should see the point cloud with the overlayed RGB colors. You can change the size of the points by changing the ```Size (Pixels)``` parameter in the ```PointCloud2``` panel. You can also change the color of the points by changing the ```Color Transformer``` parameter.
+
+## Data Processing in ROS Node
+With the camera node streaming data into the ROS network, we can now make a ROS node that subscribes to the camera topics and performs some processing on the data. 
