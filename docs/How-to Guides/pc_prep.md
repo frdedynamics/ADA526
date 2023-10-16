@@ -34,6 +34,7 @@ with your user name and **email address you use on github.com**.
 - Install the [adatools] Python package by following the instructions in the ReadMe on GitHub.
 
 ### RealSense Camera
+The RealSense driver itself is already installed on the VM, but we noticed that some things are still missing:
 - Install the kernel drivers package  
 ```sudo apt-get install librealsense2-dkms```
 - Install the [vision_opencv package](https://github.com/ros-perception/vision_opencv/tree/foxy)
