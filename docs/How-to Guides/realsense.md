@@ -39,11 +39,42 @@ To set the value of a parameter, use
 ros2 param set /camera/camera <parameter_name> <value>
 ```
 
-You can also use the parameter reconfigure interface in ```rqt``` to change parameters. To do so, run ```rqt``` in a terminal. In the ```Plugins``` menu, select ```Configuration > Dynamic Reconfigure```. In the ```Configuration``` window, select ```/camera/camera``` in the sidebar menu. You should now see a list of parameters that you can change. Note that not all parameters can be changed at runtime ([see overview here](https://github.com/IntelRealSense/realsense-ros/tree/ros2-hkr#parameters-that-can-be-modified-during-runtime)). If you change a parameter that cannot be changed at runtime, you have to restart the camera node.
+You can also use the parameter reconfigure interface in ```rqt``` to change parameters. To do so, run ```rqt``` in a terminal. In the ```Plugins``` menu, select ```Configuration > Dynamic Reconfigure```. In the ```Configuration``` window, select ```/camera/camera``` in the sidebar menu. You should now see a list of parameters that you can change. Note that not all parameters can be changed at runtime ([see overview here](https://github.com/IntelRealSense/realsense-ros/tree/ros2-hkr#parameters-that-can-be-modified-during-runtime)). If you change a parameter that cannot be changed at runtime, you have to restart the camera node. **Note**: In our experience the reconfigure interface for the RealSense cameras is a bit buggy and we recommend changing parameters in terminal or programmatically.
 ![rqt_params](../../assets/images/rqt_realsense_params.png)
 
 ## Visualizing the Camera Data in RViz
-Image data are not as easily visualized in the terminal as other data types. To visualize the camera data, we use RViz. To launch RViz, open a terminal and run
+Image data are not as easily visualized in the terminal as other data types. To visualize the camera data, we use RViz. Make sure the camera node is up and running. To launch RViz, open a new terminal and run
 ```bash
 rviz2
 ```
+![realsense_rviz2](../../assets/images/real_sense_rviz.gif)
+
+### RGB Image
+In the ```Displays``` panel, click ```Add```, go to the ```By topic``` tab and select ```/camera/color/image_raw > Image```. Click ```OK``` and a new panel with the RGB cameras video stream should appear.
+
+### Depth Image
+In the ```Displays``` panel, click ```Add```, go to the ```By topic``` tab and select ```/camera/depth/image_rect_raw > Image```. Click ```OK``` and a new panel with the depth video stream should appear.
+The depth image represents the distance to the camera as intensities and has no colors per se. However, you can change the color map that is applied to the intensities with the ```colorizer``` parameter. Activate the colorizer by running
+```bash	
+ros2 param set /camera/camera colorizer.enable true
+```
+Now you choose a color map by 
+```bash
+ros2 param set /camera/camera colorizer.color_scheme <color_map>
+```
+where ```<color_map>``` is an integer from 0 to 9.  
+![colormaps](../../assets/images/real_sense_colormaps.png)
+
+If you are not using the colorizer, you may have to deselect ```Normalize Range``` under ```Image``` in the Displays panel and adjust the ```Min Value``` and ```Max value``` to see the depth image.
+
+### Point Cloud
+In the ```Displays``` panel, click ```Add```, go to the ```By topic``` tab and select ```/camera/depth/depth/color/points > PointCloud2```. Click ```OK``` and a new panel with the depth video stream should appear.
+**If you do not see the points-topic, check if you have enabled the point cloud in the camera node.** To do so, run
+```bash
+ros2 param get /camera/camera pointcloud.enable
+```
+If the output is ```False```, run
+```bash
+ros2 param set /camera/camera pointcloud.enable true
+```
+Now you should see the point cloud with the overlayed RGB colors. You can change the size of the points by changing the ```Size (Pixels)``` parameter in the ```PointCloud2``` panel. You can also change the color of the points by changing the ```Color Transformer``` parameter.
