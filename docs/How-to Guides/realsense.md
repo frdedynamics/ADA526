@@ -69,7 +69,7 @@ If you are not using the colorizer, you may have to deselect ```Normalize Range`
 
 ### Point Cloud
 In the ```Displays``` panel, click ```Add```, go to the ```By topic``` tab and select ```/camera/depth/depth/color/points > PointCloud2```. Click ```OK``` and a new panel with the depth video stream should appear.
-**If you do not see the points-topic, check if you have enabled the point cloud in the camera node.** To do so, run
+**If you do not see the "points" topic, check if you have enabled the point cloud in the camera node.** To do so, check the parameter on the server with
 ```bash
 ros2 param get /camera/camera pointcloud.enable
 ```
@@ -81,3 +81,101 @@ Now you should see the point cloud with the overlayed RGB colors. You can change
 
 ## Data Processing in ROS Node
 With the camera node streaming data into the ROS network, we can now make a ROS node that subscribes to the camera topics and performs some processing on the data. 
+
+### Making the Node
+We are working in the project repository (_2023-ada526-semester-group-project-group-< X>_ ) which should be located in the ```ros2_ws/src``` folder. Open a new terminal, and ```cd``` into ```ros2_ws/src/2023-ada526-semester-group-project-group-<X>/ros```.
+Create a new package for your robot with a node (_img_processor_) for the camera processing. Think of a good name for your robot package and replace ```name_of_your_robot_package``` in the following command with your name. You will add more nodes to this package in future. Of course, you could also rename the image processing node if you want to.
+```bash
+ros2 pkg create --build-type ament_python --node-name img_processor name_of_your_robot_package
+```
+
+Now build the package. ```cd``` into ```ros2_ws```. Then run
+```bash
+colcon build --symlink-install
+```
+As always after building your ROS workspace, source the environment variables with
+```bash
+source ~/ros2_ws/install/setup.bash
+```
+
+### Editing the node
+Open the newly created folder of you package in VSCode and open ```img_processor.py```. The file contains some minimal Python code that we will modify to make the node subscribe to the camera topics and process the data.
+
+Below you see the example code for a minimal subscriber node as described in [our ROS2 resources](https://frdedynamics.github.io/hvl_robotics_website/courses/ada526/pub-sub#create-a-subscriber) or the [official ROS2 docs](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html#id1).
+This node initializes a subscriber to the topic ```/topic``` with the message type ```String``` from standard messages in ROS ```std_msgs.msg```. It defines a callback function ```listener_callback``` which is called each time a message arrives. In this case the callback function just prints the received string to the terminal. Of course, this is just a generic example and it does not what we need.
+
+```python
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+
+from std_msgs.msg import String
+
+class mySubscriberNode(Node):
+    def __init__(self) -> None:
+        super().__init__("my_subscriber")
+        self.sub = self.create_subscription(
+            String,
+            'topic',
+            self.listener_callback,
+            10)
+        print("Created")
+
+    def listener_callback(self, msg):
+        self.get_logger().info('I heard: "%s"' % msg.data)
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = mySubscriberNode()
+    rclpy.spin(node)
+
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+```
+#### Subscribe to RGB Image
+Therefore, copy the example code into your ```img_processor.py``` file and:
+1. Modify the subscriber such that it subscribes to the color image topic published by the camera node. The message type of the RGB image is ```Image``` from ```sensor_msgs.msg```.
+2. Modify the callback function such that it prints the width and height of the received image to the terminal. You can access the width and height of the image with ```msg.width``` and ```msg.height```.
+3. Save the changes and test the node. Since we built our workspace with the option ```--symlink-install```, we can run the node directly without building the workspace again. Open a terminal and run
+```bash
+ros2 run name_of_your_robot_package img_processor
+```
+
+#### Add CvBridge
+The image data is published as a ROS message of type ```Image```. While this format is useful for sending images around in the ROS network, it is not handy for image processing with Python libraries such as [OpenCV](https://opencv.org/) or the [Machine Vision Toolbox (MVT)](https://petercorke.github.io/machinevision-toolbox-python/index.html). We need to convert the ROS message to an OpenCV image, which also works with MVT. For the conversion, we use the [CvBridge](https://index.ros.org/p/cv_bridge/#foxy) package.
+1. Import the CvBridge in the top of the file ```from cv_bridge import CvBridge```
+2. Create a CvBridge object in the ```__init__``` function of the node ```self.bridge = CvBridge()```
+3. In the callback function, convert the ROS message to an OpenCV image with ```cv_image = self.bridge.imgmsg_to_cv2(msg)```
+
+#### Add Machine Vision Toolbox And Plot Image
+Now we can use the [Machine Vision Toolbox (MVT)](https://petercorke.github.io/machinevision-toolbox-python/index.html) to do some plotting and image processing. The MVT is a Python toolbox for image processing and computer vision developed by Peter Corke. It is based on OpenCV and Open3D, provides a lot of useful functions but is not as overwhelming as OpenCV. We are now creating an ```mvt.Image``` object from the ```cv_image```. This gives us access to many useful methods of the ````mvt.Image```` class. For example, we can plot an image with ```my_image.disp()```. All details and parameters to the _disp_ method can be found in the [MVT documentation](https://petercorke.github.io/machinevision-toolbox-python/func_imageio.html#machinevisiontoolbox.base.imageio.idisp).
+1. Import the MVT in the top of the file ```import machinevisiontoolbox as mvt```
+2. In the callback function, make an ``mvt.Image`` from the OpenCV image: ```img = mvt.Image(cv_image)```  
+3. In the callback function, plot the image with ```img.disp(reuse=True, fps=30)```  
+   We are passing two parameters to the _disp_ method: ```reuse=True``` which tells the method to reuse the same plot window for each newly arrived frame and ```fps=30``` which sets the frame rate of the plot window to 30 frames per second by making the callback function wait for $$1/30$$ seconds.
+4. Save your changes and run the node. You should see a plot window showing the RGB image stream.
+
+#### Add some Image Processing
+Smoothing is often a good first step to reduce noise and make the life of many image processing algorithms easier. Smoothing an image with MVT is fairly simple. We can just call the [_smooth_ method](https://petercorke.github.io/machinevision-toolbox-python/stubs/machinevisiontoolbox.Image.smooth.html#machinevisiontoolbox.Image.smooth) of the ``mvt.Image`` object. The _smooth_ method takes standard deviation of the Gaussian kernel as an argument. The larger the kernel size, the more information from neighboring pixels "swaps over" and smoothing effect becomes stronger.
+![Gaussian blurring](https://miro.medium.com/v2/resize:fit:1100/1*Ra4DG6PT0hxnvH2aW2OUKw.gif)
+_3x3 Gaussian kernel applied to image. The higher the standard deviation used in the kernel, the more blending with neighboring pixels takes place and the smoother the image gets. (gif from medium.com)_
+1. In the callback function, smooth the image with ```img_smoothed = img.smooth(3)```
+2. Plot the smoothed image and compare to the original.
+
+
+
+
+**We will continue with more fun stuff here**
+
+
+<!-- 
+<details>
+    <summary>Click here</summary>
+    hund  
+    hund  
+    affe  
+    affe
+</details>
+-->
