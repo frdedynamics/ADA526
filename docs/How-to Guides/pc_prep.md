@@ -36,6 +36,18 @@ with your user name and **email address you use on github.com**.
 ### RealSense Camera
 The RealSense driver itself is already installed on the VM, but we noticed that some things are still missing:
 - Install the kernel drivers package  
+```bash
+    sudo mkdir -p /etc/apt/keyrings
+    curl -sSf https://librealsense.intel.com/Debian/librealsense.pgp | sudo tee /etc/apt/keyrings/librealsense.pgp > /dev/null
+
+    sudo apt-get install apt-transport-https
+
+    echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.intel.com/Debian/apt-repo `lsb_release -cs` main" | \
+    sudo tee /etc/apt/sources.list.d/librealsense.list
+    sudo apt-get update
+```
+
+
 ```sudo apt-get install librealsense2-dkms```
 - Install the [vision_opencv package](https://github.com/ros-perception/vision_opencv/tree/foxy)
 ```bash
