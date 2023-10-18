@@ -45,10 +45,10 @@ The RealSense driver itself is already installed on the VM, but we noticed that 
     echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.intel.com/Debian/apt-repo `lsb_release -cs` main" | \
     sudo tee /etc/apt/sources.list.d/librealsense.list
     sudo apt-get update
+
+    sudo apt-get install librealsense2-dkms
 ```
 
-
-```sudo apt-get install librealsense2-dkms```
 - Install the [vision_opencv package](https://github.com/ros-perception/vision_opencv/tree/foxy)
 ```bash
     cd ros2_ws/src
