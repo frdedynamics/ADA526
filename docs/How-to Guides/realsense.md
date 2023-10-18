@@ -68,7 +68,7 @@ where ```<color_map>``` is an integer from 0 to 9.
 If you are not using the colorizer, you may have to deselect ```Normalize Range``` under ```Image``` in the Displays panel and adjust the ```Min Value``` and ```Max value``` to see the depth image.
 
 ### Point Cloud
-In the ```Displays``` panel, click ```Add```, go to the ```By topic``` tab and select ```/camera/depth/depth/color/points > PointCloud2```. Click ```OK``` and a new panel with the depth video stream should appear.
+In the ```Displays``` panel, click ```Add```, go to the ```By topic``` tab and select ```/camera/depth/depth/color/points > PointCloud2```. Click ```OK``` and a new panel with the depth video stream should appear. You probably have to changed the ```Fixed Frame``` from ```map``` to ```camera_link```.
 **If you do not see the "points" topic, check if you have enabled the point cloud in the camera node.** To do so, check the parameter on the server with
 ```bash
 ros2 param get /camera/camera pointcloud.enable
