@@ -93,7 +93,9 @@ At the end of semester, we want to organize a showcase and competition. Each gro
 The challenges focus on different qualities of your robot. You will collect points in each challenge, and the total sum of points collected will determine the winner. There is no minimum number of points you need to reach in each challenges - it is up to you if you want to be strategic and specialize your robot design towards a subset of the challenges, or if you want to build an all-round robot that can perform well in all challenges. 
 
 ### Challenge 1: Precision and Accuracy
-This challenge is about testing the precision and accuracy of your robot. We will provide fixtures for replaceable paper targets that fit into the mounting holes on the base plate. We will also provide a pen holder to be mounted to the end effector of your robot. The pen holder has an attachment for small payloads. The goal is to make five dots with the pen at the center of the target, while small payloads are added to the end effector in-between the trials. The distribution of the dots around the center of the target (distance of mean to center, and standard deviation) will be used to calculate the score. We may define a (rather generous) time limit per group. This challenge is not about speed, but we want to prevent tinkering during the trials.
+This challenge is about testing the precision and accuracy of your robot. We will provide fixtures for replaceable paper targets that fit into the mounting holes on the base plate. We also provide a [pen holder design](./How-to%20Guides/mechanical_design#pen-mount) to be mounted to the end effector of your robot. The pen holder has an attachment for small payloads. The goal is to make five dots with the pen at the center of the target, while small payloads are added to the end effector in-between the trials. The distribution of the dots around the center of the target (distance of mean to center, and standard deviation) will be used to calculate the score. We may define a (rather generous) time limit per group. This challenge is not about speed, but we want to prevent tinkering during the trials.
+
+[to Pen Holder Design](./How-to%20Guides/mechanical_design#pen-mount){: .btn .btn-blue}
  - In advance: Each group must define a home pose for their robot which can't be changed after the target coordinates are announced.
  - The target coordinates and the payloads are announced. The order of the payloads for each trial is randomized.
  - The groups perform the challenge one after another. 5 trials per group.
@@ -102,7 +104,6 @@ This challenge is about testing the precision and accuracy of your robot. We wil
  - The score is calculated based on distance of mean to center and standard deviation. If the marking is not just a dot, the point of the parking with the greatest distance to the center is used for the calculation.
 
 ![Accuracy vs. precision](../assets/images/accuracy-vs-precision.jpg)
-
 
 ### Challenge 2: Vision, Control and Speed
 In this challenge we test your robot's capabilities of vision-based control and dynamic movements. We will provide two targets that can easily be tracked by a camera (e.g. a red ball and a green ball) which fit into the mounting holes in the base plate, and an end effector with a tip that must touch the targets. The goal is to identify the location of the targets with the camera, to then move the tip of the end effector from one target to the other as fast as possible. The time between the two targets is measured and used to calculate a score. Three different locations of the targets are used, and the order of the targets is randomized. The coordinates will not be announced in advance -- you have to use the camera to identify their location.

@@ -43,3 +43,18 @@ We rely on this [excellent parametric design](https://www.instructables.com/Crea
 [Download Slewing Bearing](https://content.instructables.com/F7B/FGGK/J3OPQDLL/F7BFGGKJ3OPQDLL.f3d){: .btn .btn-blue}
 
 <iframe src="https://myhvl14.autodesk360.com/shares/public/SH512d4QTec90decfa6ebce8a17257a2b2f4?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+
+## End Effector
+### Pen Mount
+This is the pen mount we are going to use in [Challenge 1](../project#challenge-1-precision-and-accuracy). Please print it yourself and assemble it. The pen is clamped with M2.5 screws which are directly screwed into the plastic. The weight attachment requires a M3 screw across, which is also directly screwed into the plastic. The weight attachment and the pen holder are held together and mounted to your robot with four M3 screws in a 30x7mm rectangular pattern. The pen holder is designed for [BIC Cristal](https://en.wikipedia.org/wiki/Bic_Cristal) pens.
+
+
+<img src="../../assets/images/pen_mount_v1_printed.jpg" width="300" height="100">
+
+<object data="../../assets/images/Pen Mount Drawing v4.pdf" type="application/pdf" width="800px" height="550px">
+    <embed src="../../assets/images/Pen Mount Drawing v4.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../../assets/images/Pen Mount Drawing v4.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
+<iframe src="https://myhvl14.autodesk360.com/shares/public/SH512d4QTec90decfa6e804f3bb73f7c94b1?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
