@@ -165,17 +165,147 @@ _3x3 Gaussian kernel applied to image. The higher the standard deviation used in
 2. Plot the smoothed image and compare to the original.
 
 
+## Example Node for 'Deprojection'
+In [Challenge 2](../project#challenge-2-vision-control-and-speed) we want to move our robot to colored spheres in the workspace. We perform color blob tracking in the RGB image from the camera which gives us the pixel coordinates of the centroid of the sphere in the image. We can get the depth of the centroid from the corresponding pixel in the depth image. With the pixel coordinates and the depth (and the intrinsic parameters of the camera), we can calculate the 3D coordinates of the sphere in the camera frame (more precisely in the ```camera_color_optical_frame```). This process is called _deprojection_. We use the function ```rs2_deproject_pixel_to_point()``` from the RealSense SDK for Python ```pyrealsense2``` for this computation. **You have to install the package on your VM with ```pip install pyrealsense2``` to use the function.**
+
+Below is the example code for a ROS node doing the deprojection of a pixel in the RGB image to a 3D point in the color camera frame. The node subscribes to the RGB and depth image topics and the camera intrinsics topic. It publishes the deprojected point as a ```PointStamped``` which can be visualized in Rviz. You can use the node as a starting point for your own node for Challenge 2. You can extend the node by a adding image processing and blob detection pipeline as we discussed in the lectures.
+
+{: .important}
+For the node below to work properly, you must configure the real_sense camera node such that it aligns the color and depth image:  
+```ros2 launch realsense2_camera rs_launch.py align_depth.enable:=true```  
+Otherwise, the pixel coordinates in color and depth image will not match and the node retrieves incorrect depth values.
+
+Example node:
+
+```python    
+import rclpy
+from rclpy.node import Node
+
+from sensor_msgs.msg import Image as image_msg
+from sensor_msgs.msg import CameraInfo as camerainfo_msg
+from geometry_msgs.msg import PointStamped as point_msg
+from matplotlib import pyplot as plt
+from cv_bridge import CvBridge
+import machinevisiontoolbox as mvt
+import numpy as np
+import pyrealsense2 as rs
+
+class ImageProcessor(Node):
+
+    def __init__(self):
+        super().__init__('image_processor_node')
+
+        self.sub_intrinsics = self.create_subscription(
+            camerainfo_msg,
+            '/camera/aligned_depth_to_color/camera_info',
+            self.sub_intrinsics_callback,
+            10)
+
+        self.sub_color = self.create_subscription(
+            image_msg,
+            '/camera/color/image_raw',
+            self.sub_color_callback,
+            10)
+        
+        self.sub_depth = self.create_subscription(
+            image_msg,
+            '/camera/aligned_depth_to_color/image_raw',
+            self.sub_depth_callback,
+            10)
+
+        self.pub_point = self.create_publisher(
+            point_msg,
+            '/goal_point',
+            10)
+
+        self.br = CvBridge()
+        self.fig = plt.figure(figsize=(7, 10))
+        self.fig.add_subplot(2,1,1)
+        self.fig.add_subplot(2,1,2)
+        self.centroids = np.array([0,0])
+        self.depth = 5
+        self.intrinsics = rs.intrinsics()
+        self.point = point_msg()
 
 
-**We will continue with more fun stuff here**
+    def sub_color_callback(self, msg):    
+        # Convert ROS Image message to OpenCV image
+        current_frame = self.br.imgmsg_to_cv2(msg)
+        img = mvt.Image(current_frame)
+
+        # -----> Image processing and pixel classification goes here <-----
+
+        try:
+
+            # -----> Blob detection goes here <-----
+
+            self.centroids = [600, 350]  # replace these constant values with coordinates of the centroid of a detected blob. 
+            try:
+                ## Deprojection: 2D pixel coordinates + depth to 3D point coordinates:
+                point = rs.rs2_deproject_pixel_to_point(self.intrinsics, self.centroids, self.depth)
+                #print(point)
+
+                ## publish the point coordinates (can be visualized in rviz as a "PointStamped" message):
+                self.point.header.stamp = self.get_clock().now().to_msg()
+                self.point.header.frame_id = "camera_color_optical_frame"
+                self.point.point.x = point[0]/1000
+                self.point.point.y = point[1]/1000
+                self.point.point.z = point[2]/1000
+                self.pub_point.publish(self.point)
+            except:
+                print("Deprojecting Pixel to Point failed")
+        except:
+            print("No blobs found")
+
+        ## plotting (only reccomended for debugging):
+        # self.fig.axes[0].cla() # clear axis from last iteration, otherwise bounding boxes accumulate
+        # self.fig.axes[0].title.set_text("Color image")
+        # self.fig.axes[0].plot(self.centroids[0], self.centroids[1], 'ro')
+        # img.disp(fig=self.fig, ax=self.fig.axes[0], fps=30)
 
 
-<!-- 
+    def sub_intrinsics_callback(self, msg):
+        self.intrinsics.width = msg.width
+        self.intrinsics.height = msg.height
+        self.intrinsics.ppx = msg.k[2]
+        self.intrinsics.ppy = msg.k[5]
+        self.intrinsics.fx = msg.k[0]
+        self.intrinsics.fy = msg.k[4]
+        self.intrinsics.model = rs.distortion.none
+        self.intrinsics.coeffs = [i for i in msg.d]
+        #self.intrinsics.coeffs.reverse()
+
+    def sub_depth_callback(self, msg):
+        current_frame = self.br.imgmsg_to_cv2(msg)
+        img = mvt.Image(current_frame)
+        self.depth = img.image[int(self.centroids[1]), int(self.centroids[0])] # order of coordinates is reversed in numpy array img.image
+        ## plotting (only reccomended for debugging):
+        # self.fig.axes[1].cla()
+        # self.fig.axes[1].title.set_text("Depth image")
+        # self.fig.axes[1].plot(self.centroids[0], self.centroids[1], 'ro')
+        # img.disp(fig=self.fig, ax=self.fig.axes[1], fps=30)
+        
+
+def main(args=None):
+    rclpy.init(args=args)
+
+    img_processor = ImageProcessor()
+
+    rclpy.spin(img_processor)
+
+    # Destroy the node explicitly
+    # (optional - otherwise it will be done automatically
+    # when the garbage collector destroys the node object)
+    img_processor.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
+<!--
 <details>
-    <summary>Click here</summary>
-    hund  
-    hund  
-    affe  
-    affe
+<summary>Click here</summary>
+hund
 </details>
 -->
