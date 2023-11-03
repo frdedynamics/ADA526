@@ -48,7 +48,10 @@ The RealSense driver itself is already installed on the VM, but we noticed that 
 
     sudo apt-get install librealsense2-dkms
 ```
-
+- To do the "deprojection" of color image coordinates + depth to 3D coordinates we need the Python wrapper of the RealSense SDK. Install it with  
+```bash
+    pip install pyrealsense2
+```
 - Install the [vision_opencv package](https://github.com/ros-perception/vision_opencv/tree/foxy)
 ```bash
     cd ros2_ws/src
