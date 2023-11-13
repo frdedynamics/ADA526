@@ -116,7 +116,7 @@ In this challenge we test your robot's capabilities of vision-based control and 
 
 <a href="../assets/images/cvs_challenge_setup.jpg" width="330">
     <img 
-        src="/../assets/images/cvs_challenge_setup.jpg"  width="330">
+        src="../assets/images/cvs_challenge_setup.jpg"  width="330">
 </a>
 
 
