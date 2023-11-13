@@ -106,13 +106,18 @@ This challenge is about testing the precision and accuracy of your robot. We wil
 ![Accuracy vs. precision](../assets/images/accuracy-vs-precision.jpg)
 
 ### Challenge 2: Vision, Control and Speed
-In this challenge we test your robot's capabilities of vision-based control and dynamic movements. We will provide two targets that can easily be tracked by a camera (e.g. a red ball and a green ball) which fit into the mounting holes in the base plate, and an end effector with a tip that must touch the targets. The goal is to identify the location of the targets with the camera, to then move the tip of the end effector from one target to the other as fast as possible. The time between the two targets is measured and used to calculate a score. Three different locations of the targets are used, and the order of the targets is randomized. The coordinates will not be announced in advance -- you have to use the camera to identify their location.
+In this challenge we test your robot's capabilities of vision-based control and dynamic movements. We will provide two targets that can easily be tracked by a camera (a blue ball and a green ball, 40mm diameter) which will be placed on two fixtures that fit into the mounting holes in the base plate, and the end effector (pen) from the first challenge is used to knock the balls off the fixtures. The goal is to identify the location of the balls with the camera, to then knock them off the fixtures with the pen as quickly as possible. The time between hitting the first ball and the second ball is measured and used to calculate a score. Three different locations of the targets are used, and the order of the targets is randomized. The coordinates will not be announced in advance -- you have to use the camera to identify their location.
  - In advance: Each group must define a home pose for their robot which can't be changed after the first targets are placed.
  - The groups perform the challenge one after another. One trial for each of the three target locations per group.
  - The targets are placed on the base plate. The order of the targets is randomized.
  - Each trial starts from the defined home pose.
- - The tip on the end effector must reach the first target. Time is taken. The tip must then reach the second target. Time is taken. The time between the two targets is used to calculate the score.
+ - The tip on the end effector must knock off the first target. Time is taken. The tip must then knock off the second target. Time is taken. The time between the two targets is used to calculate the score.
  - The robot must neither be touched nor manually controlled during the trials. 
+
+<a href="../assets/images/cvs_challenge_setup.jpg" width="330">
+    <img 
+        src="/../assets/images/cvs_challenge_setup.jpg"  width="330">
+</a>
 
 
 ### Challenge 3: Strength
