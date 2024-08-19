@@ -68,6 +68,6 @@ The RealSense driver itself is already installed on the VM, but we noticed that 
 
 [Fusion 360]: https://www.autodesk.com/education/edu-software/overview?sorting=featured&filters=individual#card-f360
 [Bambu Studio]: https://bambulab.com/en/download/studio
-[VMWare Player]: https://customerconnect.vmware.com/en/downloads/details?downloadGroup=WKST-PLAYER-1625&productId=1039&rPId=98562
+[VMWare Player]: https://softwareupdate.vmware.com/cds/vmw-desktop/player/17.5.0/22583795/windows/core/VMware-player-17.5.0-22583795.exe.tar
 [virtual machine]: https://drive.google.com/file/d/15QU57vWVVieqcQ1c6Yy_SgfXyAmGCMJW/view?usp=sharing
 [adatools]: https://github.com/frdedynamics/adatools

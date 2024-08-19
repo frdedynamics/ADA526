@@ -46,6 +46,6 @@ You have to print your base to take a photo, but you don't have to submit the ph
 
 
 
-**Deadline: Midnight, Thursday 14.9.23.**  
+**Deadline: TBA**  
 **Submit files on Canvas. This is an individual hand-in.**
 

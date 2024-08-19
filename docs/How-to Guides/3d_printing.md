@@ -20,16 +20,16 @@ nav_order: 3
 ### Variable Infill in Bambu Studio
 You can easily split your model into parts and adjust settings locally in Bambu Studio. This is useful for minimizing the weight and material use of parts that require strength only in certain areas. 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x4FI--m1bmI?si=JeXkbIUQr1Vl5OQp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+<!---
 ## Frikk's 3D Printing Guide
 Frikk Fossdal has his own website for ADA525 where he has information on 3D printing connected to his lectures during the first weeks.
 
 [Frikk's 3D Printing Guide](https://ada525.frikkfossdal.com/content/guides/3dprint){: .btn }
 {: .text-center }
-
+-->
 ## Filament
 We have mostly PLA in stock. If you want to use other materials, please contact staff.
 
 ## Where to find the printers
-Bergen: Room D415/D425  
+Bergen: Ask Frikk Fossdal 
 Førde: Robotics lab/experiment room next to the lab
