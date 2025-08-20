@@ -11,7 +11,7 @@ On your Windows PC:
 - Install [Fusion 360]
     - Create an Autodesk account with your HVL email and [verify your student status](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-verify-your-student-eligibility.html).
 - Install [Bambu Studio]
-- Install [VMWare Player]
+- Install [VMWare Player (Windows)] or [VMWare Fusion (Mac)]. 
     - Download our Ubuntu 20.04 [virtual machine] for VMWare Player with pre-installed VSCode, ROS2, Robotics toolbox, Dynamixel Wizard and Dynamixel SDK.
     - Unzip the virtual machine to a folder of your choice.
     - In the VMWare Player, open the virtual machine `ctrl+O` by selecting the `.vmx` file in the folder you unzipped the virtual machine to.
@@ -68,6 +68,7 @@ The RealSense driver itself is already installed on the VM, but we noticed that 
 
 [Fusion 360]: https://www.autodesk.com/education/edu-software/overview?sorting=featured&filters=individual#card-f360
 [Bambu Studio]: https://bambulab.com/en/download/studio
-[VMWare Player]: https://softwareupdate.vmware.com/cds/vmw-desktop/player/17.5.0/22583795/windows/core/VMware-player-17.5.0-22583795.exe.tar
+[VMWare Player (Windows)]: https://archive.org/download/vmware-player-full-17.5.0-22583795_202402/VMware-player-full-17.5.0-22583795.exe
+[VMWare Fusion (Mac)]: https://archive.org/download/vmware-fusion-13.6.4-24832108-universal/VMware-Fusion-13.6.4-24832108_universal.dmg
 [virtual machine]: https://drive.google.com/file/d/15QU57vWVVieqcQ1c6Yy_SgfXyAmGCMJW/view?usp=sharing
 [adatools]: https://github.com/frdedynamics/adatools
