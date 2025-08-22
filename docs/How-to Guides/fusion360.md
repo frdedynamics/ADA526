@@ -10,11 +10,13 @@ Fusion 360 is a computer-aided design (CAD) software developed by Autodesk. We a
 ![Fusion 360](../../assets/images/fusion360.png)
 ## Tutorials
 Autodesk has a good [collection of online tutorials](https://www.autodesk.com/learn/catalog/product%257Cmicrolearning/Fusion%257Ctutorials) that help us to master most of the important functionalities in Fusion 360. See also the [playlists](https://www.autodesk.com/learn/catalog/product%257Cmicrolearning/Fusion%257Ccuratedlist) focussing on different topics.
+Picking modules from this beginners' [self-paced learning collection](https://help.autodesk.com/view/fusion360/ENU/courses/) can also be a way to learn more about specific topics you are interested in.
 
-Here are some tutorials that we think are particularly useful for this course:
+
+Here are some tutorials that we think are _particularly useful for this course_:
 
 ### Getting started
-Very much recommended crash course to get started: [Learn Fusion 360 in 90 Minutes](https://www.autodesk.com/certification/learn/course/learn-fusion-360-in-90-minutes)
+Very much recommended crash course to get started: [Learn Fusion for CAD in 90 Minutes](https://www.autodesk.com/learn/ondemand/course/learn-fusion-for-cad-in-90-minutes)
 
 ### Invite People to a Project
 You should collaborate on your CAD designs. Here is how you [invite people to Fusion projects](https://help.autodesk.com/view/fusion360/ENU/?guid=FT-ROLES-FOLDER-LEVEL). 
@@ -26,10 +28,8 @@ Joints are crucial for defining the relative positions and motions of components
 To 3D-print a part we must export it as a mesh in form of a .stl-file. [Export for 3D-printing](https://www.autodesk.com/certification/learn/module/exporting-for-3d-printing)
 
 ### Parametric sketching
-Parametric sketching is a powerful tool to create modifiable and reusable designs. It can save you hours when you need to make changes to a complex design. [Parametric sketching](https://www.autodesk.com/learn/ondemand/curated/sketch-basics/5kns5wSM7JU0YhJlkDebCO)
+[Parametric sketching](https://www.autodesk.com/learn/ondemand/curated/sketch-basics/5kns5wSM7JU0YhJlkDebCO) is a powerful tool to create modifiable and reusable designs. It can save you hours when you need to make changes to a complex design. For an even deeper dive into the parametric modeling world you can check out [Configurations](https://www.autodesk.com/learn/ondemand/curated/configurations).
 
-## Beginner Course
-Following [this course](https://help.autodesk.com/view/fusion360/ENU/courses/) can also be an option to get started.
 
 ## Add-ins
 Fusion 360 has a lot of useful add-ins that can be installed.  
