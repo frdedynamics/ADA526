@@ -10,7 +10,7 @@ Fusion 360 is a computer-aided design (CAD) software developed by Autodesk. We a
 ![Fusion 360](../../assets/images/fusion360.png)
 ## Tutorials
 Autodesk has a good [collection of online tutorials](https://www.autodesk.com/learn/catalog/product%257Cmicrolearning/Fusion%257Ctutorials) that help us to master most of the important functionalities in Fusion 360. See also the [playlists](https://www.autodesk.com/learn/catalog/product%257Cmicrolearning/Fusion%257Ccuratedlist) focussing on different topics.
-Picking modules from this beginners' [self-paced learning collection](https://help.autodesk.com/view/fusion360/ENU/courses/) can also be a way to learn more about specific topics you are interested in.
+Picking modules from this beginners [self-paced learning collection](https://help.autodesk.com/view/fusion360/ENU/courses/) can also be a way to learn more about specific topics you are interested in.
 
 
 Here are some tutorials that we think are _particularly useful for this course_:
