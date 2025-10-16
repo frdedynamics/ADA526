@@ -10,6 +10,8 @@ has_toc: false
 
 Here are some pictures of robots built by students in recent years. For inspiration and to learn from.
 
+---
+
 <iframe src="https://myhvl50.autodesk360.com/shares/public/SH28cd1QT2badd0ea72b62c56bb36ba97371?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
 
 ![Robot 1](../assets/images/robot_gallery/P9046048.JPG)
@@ -20,6 +22,7 @@ Here are some pictures of robots built by students in recent years. For inspirat
 ![Robot 1](../assets/images/robot_gallery/P9046062.JPG)
 ![Robot 1](../assets/images/robot_gallery/P9046067.JPG)
 
+---
 
 <iframe src="https://myhvl50.autodesk360.com/shares/public/SH28cd1QT2badd0ea72beb8d6887335f1561?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
 
@@ -31,4 +34,6 @@ Here are some pictures of robots built by students in recent years. For inspirat
 ![Robot 2](../assets/images/robot_gallery/P9046077.JPG)
 ![Robot 2](../assets/images/robot_gallery/P9046080.JPG)
 ![Robot 2](../assets/images/robot_gallery/P9046083.JPG)
+
+---
 
