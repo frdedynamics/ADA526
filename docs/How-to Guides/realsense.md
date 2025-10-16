@@ -93,6 +93,10 @@ Now build the package. ```cd``` into ```ros2_ws```. Then run
 ```bash
 colcon build --symlink-install
 ```
+The command above builds in fact all packages in the ```src``` folder of your workspace. If you have many packages this may take some time. You can avoid rebuilding all packages by specifying the package you want to build with the option ```--packages-select```. For example, to build only your robot package, run
+```bash
+colcon build --symlink-install --packages-select name_of_your_robot_package
+```
 As always after building your ROS workspace, source the environment variables with
 ```bash
 source ~/ros2_ws/install/setup.bash
