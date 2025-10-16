@@ -60,7 +60,7 @@ The RealSense driver itself is already installed on the VM, but we noticed that 
     colcon build --symlink-install
 ```
 - Install the [machine vision toolbox](https://github.com/petercorke/machinevision-toolbox-python) for Python from Peter Corke  
-```pip install machinevision-toolbox-python```
+```pip install machinevision-toolbox-python==0.9.6```
 - For all plotting functions of the vision toolbox to work, you most likely need to upgrade ```matplotlib```  
 ```pip install --upgrade matplotlib```
 
