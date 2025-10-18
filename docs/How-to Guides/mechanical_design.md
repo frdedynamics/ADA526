@@ -48,6 +48,8 @@ We rely on this [excellent parametric design](https://www.instructables.com/Crea
 ### Pen Mount
 This is the pen mount we are going to use in [Challenge 1](../project#challenge-1-precision-and-accuracy). Please print it yourself and assemble it. The pen is clamped with M2.5 screws which are directly screwed into the plastic. The weight attachment requires a M3 screw across, which is also directly screwed into the plastic. The weight attachment and the pen holder are held together and mounted to your robot with four M3 screws in a 30x7mm rectangular pattern. The pen holder is designed for [BIC Cristal](https://en.wikipedia.org/wiki/Bic_Cristal) pens.
 
+[Download Pen Mount](../../assets/cad/pen_mount.f3d){: .btn .btn-blue}
+[Download BIC Cristal Pen Model](../../assets/cad/BIC_Cristal.STEP){: .btn .btn-blue} 
 
 <img src="../../assets/images/pen_mount_v1_printed.jpg" width="300" height="100">
 
