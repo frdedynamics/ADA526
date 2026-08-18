@@ -12,7 +12,7 @@ On your Windows PC:
     - Create an Autodesk account with your HVL email and [verify your student status](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-verify-your-student-eligibility.html).
 - Install [Bambu Studio]
 - Install [VMWare Player (Windows)] or [VMWare Fusion (Mac)]. 
-    - Download our Ubuntu 20.04 [virtual machine] for VMWare Player with pre-installed VSCode, ROS2, Robotics toolbox, Dynamixel Wizard and Dynamixel SDK.
+    - Download our Ubuntu 20.04 [virtual machine] (link valid until 17.9.2026) for VMWare Player with pre-installed VSCode, ROS2, Robotics toolbox, Dynamixel Wizard and Dynamixel SDK.
     - Unzip the virtual machine to a folder of your choice.
     - In the VMWare Player, open the virtual machine `ctrl+O` by selecting the `.vmx` file in the folder you unzipped the virtual machine to.
     - Start the virtual machine by clicking `Play virtual machine`.
@@ -70,5 +70,5 @@ The RealSense driver itself is already installed on the VM, but we noticed that 
 [Bambu Studio]: https://bambulab.com/en/download/studio
 [VMWare Player (Windows)]: https://archive.org/download/vmware-player-full-17.5.0-22583795_202402/VMware-player-full-17.5.0-22583795.exe
 [VMWare Fusion (Mac)]: https://archive.org/download/vmware-fusion-13.6.4-24832108-universal/VMware-Fusion-13.6.4-24832108_universal.dmg
-[virtual machine]: https://drive.google.com/file/d/15QU57vWVVieqcQ1c6Yy_SgfXyAmGCMJW/view?usp=sharing
+[virtual machine]: https://filesender.sikt.no/?s=download&token=947c90e9-451b-4fae-a025-34f07374bc75
 [adatools]: https://github.com/frdedynamics/adatools
