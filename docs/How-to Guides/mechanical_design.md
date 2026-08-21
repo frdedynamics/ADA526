@@ -36,13 +36,22 @@ Evolution has optimized the structure of bones to be as stiff as possible while 
 ## Designing Joints
 Some notes on the design of the joints.
 
-### First Joint
-The first joint of your robot, with a vertical rotation axis, has to suspend the weight of the entire robot which causes high torques perpendicular to the joint axis. To absorb these torques we use one or multiple [slewing bearings](https://en.wikipedia.org/wiki/Slewing_bearing) which are characterized by wide rings, and are commonly used to support heavy but slow-turning loads. In this course, we 3D-print our slewing bearings ourself!  
-We rely on this [excellent parametric design](https://www.instructables.com/Create-a-Parametric-3d-printable-Slew-Bearing-With/), which lets you modify the dimensions to fit your design.
+### Robot Base
+The first joint of your robot has a vertical rotation axis, but it also has to carry the weight of the entire robot. The weight of the links, motors and payload causes high torques perpendicular to the joint axis. Therefore, you have to think carefully about how the base supports these torques. Any unwanted movement in the base joint will be amplified by the kinematic chain and result in a large deviation of the end-effector position. For this reason, commercial robot joints usually use bearings with large diameters around the joint axis. This makes the joint stiff against tilting moments, but precision bearings in these dimensions are very expensive.
+
+Common bearing choices for this type of load are [slewing bearings or crossed roller bearings](https://pibsales.com/bearings/robotic-bearing-systems/). Slewing bearings are characterized by wide rings, and are commonly used to support heavy but slow-turning loads with large tilting moments.
+
+However, bearings with rollers are difficult to fabricate ourselves. 3D-printed versions exist, for example this [parametric slewing bearing design](https://www.instructables.com/Create-a-Parametric-3d-printable-Slew-Bearing-With/), which lets you modify the dimensions to fit your design. However, it is difficult to achieve a stiff bearing that still rotates well with 3D-printed races and rollers.
 
 [Download Slewing Bearing](https://content.instructables.com/F7B/FGGK/J3OPQDLL/F7BFGGKJ3OPQDLL.f3d){: .btn .btn-blue}
 
 <iframe src="https://myhvl14.autodesk360.com/shares/public/SH512d4QTec90decfa6ebce8a17257a2b2f4?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+
+Because of these manufacturing constraints, it can be more attractive to make V-groove or deep-groove style bearings with printed races and cages, but commercial steel balls, for example steel BB balls, as the rolling elements. The balls are cheap and easy to source, but they are still made with relatively high precision and good surface quality. The following videos show examples of this approach:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0KhV6JW2sHg" title="3D printed bearing example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NIIVZcgJWPs" title="3D printed bearing example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## End Effector
 ### Pen Mount
