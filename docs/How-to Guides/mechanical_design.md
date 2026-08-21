@@ -37,7 +37,12 @@ Evolution has optimized the structure of bones to be as stiff as possible while 
 Some notes on the design of the joints.
 
 ### Robot Base
-The robot base connects the standardized base plate to the first joint. It must fit the M6 mounting holes in the 150mm square pattern on the [base plate](../project#base-plate). The first joint motor should have its rotational axis pointing upwards in the center of this mounting square. Remember that your base can consist of multiple parts. Keep in mind that printing large flat surfaces can be challenging and often leads to warping.
+The robot base connects the standardized base plate to the first joint. It must fit the M6 mounting holes in the 150mm square pattern on the [base plate](../project#base-plate). This is a design constraint that your base has to follow. The first joint motor should have its rotational axis pointing upwards in the center of this mounting square. Remember that your base can consist of multiple parts. Keep in mind that printing large flat surfaces can be challenging and often leads to warping.
+
+<a href="../../assets/images/mounting_square_sketch.png" width="330">
+    <img
+        src="../../assets/images/mounting_square_sketch.png"  width="330">
+</a>
 
 Even though the base is a part of the robot that does not move, it is mechanically very important. The first joint of your robot has a vertical rotation axis, but it also has to carry the weight of the entire robot. The weight of the links, motors and payload causes high torques perpendicular to the joint axis. Therefore, you have to think carefully about how the base supports these torques. Any unwanted movement in the base joint will be amplified by the kinematic chain and result in a large deviation of the end-effector position.
 
