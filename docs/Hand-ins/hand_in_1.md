@@ -54,6 +54,6 @@ You have to print your link to take a photo, but you don't have to submit the ph
 
 
 
-**Deadline: TBA**  
+**Deadline: Check Canvas**  
 **Submit files on Canvas. This is an individual hand-in.**
 
