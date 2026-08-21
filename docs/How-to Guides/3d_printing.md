@@ -16,8 +16,16 @@ nav_order: 3
  [Introduction](https://wiki.bambulab.com/en/x1/manual#introduction){: .btn }                               | [Introduction](https://wiki.bambulab.com/en/p1/manual#introduction){: .btn }
  [Printing](https://wiki.bambulab.com/en/x1/manual#printing){: .btn }                                       | [Printing](https://wiki.bambulab.com/en/p1/manual#printing){: .btn }
 
-## Tips and Tricks
-### Variable Infill in Bambu Studio
+## Design for 3D Printing
+When designing parts, one should always consider the strengths and limitations of the manufacturing method that is going to be used to make the part. This also applies to 3D printing, even though it is often easy to overlook. Modern printers and slicers are very capable and can print almost any shape in almost any orientation, but the result is still strongly affected by how the part is designed. Print orientation, overhangs, tolerances, wall thickness, infill, and how the part is loaded should therefore be considered already in CAD.
+
+The blog post linked below gives a very good and thorough overview of design for 3D printing. It focuses on functional FDM/FFF parts and collects many practical rules of thumb with examples. This is useful when designing robot links, joints, brackets and fixtures, where the parts should be strong, easy to print, and not use more material than needed.
+
+[Design for 3D-Printing](https://blog.rahix.de/design-for-3d-printing/){: .btn .btn-blue}
+{: .text-center }
+
+
+## Variable Infill in Bambu Studio
 You can easily split your model into parts and adjust settings locally in Bambu Studio. This is useful for minimizing the weight and material use of parts that require strength only in certain areas. 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x4FI--m1bmI?si=JeXkbIUQr1Vl5OQp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <!---
@@ -31,5 +39,6 @@ Frikk Fossdal has his own website for ADA525 where he has information on 3D prin
 We have mostly PLA in stock. If you want to use other materials, please contact staff.
 
 ## Where to find the printers
-Bergen: Ask Frikk Fossdal 
+Bergen: Space 162 in K2
+
 Førde: Robotics lab/experiment room next to the lab
