@@ -37,11 +37,24 @@ Evolution has optimized the structure of bones to be as stiff as possible while 
 Some notes on the design of the joints.
 
 ### Robot Base
-The first joint of your robot has a vertical rotation axis, but it also has to carry the weight of the entire robot. The weight of the links, motors and payload causes high torques perpendicular to the joint axis. Therefore, you have to think carefully about how the base supports these torques. Any unwanted movement in the base joint will be amplified by the kinematic chain and result in a large deviation of the end-effector position. For this reason, commercial robot joints usually use bearings with large diameters around the joint axis. This makes the joint stiff against tilting moments, but precision bearings in these dimensions are very expensive.
+The robot base connects the standardized base plate to the first joint. It must fit the M6 mounting holes in the 150mm square pattern on the [base plate](../project#base-plate). This is a design constraint that your base has to follow. The first joint motor should have its rotational axis pointing upwards in the center of this mounting square. Remember that your base can consist of multiple parts. Keep in mind that printing large flat surfaces can be challenging and often leads to warping.
 
-Common bearing choices for this type of load are [slewing bearings or crossed roller bearings](https://pibsales.com/bearings/robotic-bearing-systems/). Slewing bearings are characterized by wide rings, and are commonly used to support heavy but slow-turning loads with large tilting moments.
+<a href="../../assets/images/mounting_square_sketch.png" width="330">
+    <img
+        src="../../assets/images/mounting_square_sketch.png"  width="330">
+</a>
 
-However, bearings with rollers are difficult to fabricate ourselves. 3D-printed versions exist, for example this [parametric slewing bearing design](https://www.instructables.com/Create-a-Parametric-3d-printable-Slew-Bearing-With/), which lets you modify the dimensions to fit your design. However, it is difficult to achieve a stiff bearing that still rotates well with 3D-printed races and rollers.
+Even though the base is a part of the robot that does not move, it is mechanically very important. The first joint of your robot has a vertical rotation axis, but it also has to carry the weight of the entire robot. The weight of the links, motors and payload causes high torques perpendicular to the joint axis. Therefore, you have to think carefully about how the base supports these torques. Any unwanted movement in the base joint will be amplified by the kinematic chain and result in a large deviation of the end-effector position.
+
+For this reason, commercial robot joints usually use bearings with large diameters around the joint axis. This makes the joint stiff against tilting moments, but precision bearings in these dimensions are very expensive. This [cutaway example of a commercial robotic bearing system](https://pibsales.com/bearings/robotic-bearing-systems/) gives an impression of how much of a robot joint can be bearing and support structure.
+
+Common bearing choices for this type of load are [slewing bearings](https://en.wikipedia.org/wiki/Slewing_bearing) or [crossed roller bearings](https://www.schaeffler.us/us/products-and-solutions/industrial/product-portfolio/rolling_and_plain_bearings/crossed_roller_bearings/). Slewing bearings are characterized by wide rings, and are commonly used to support heavy but slow-turning loads with large tilting moments.
+
+In this course, we usually have to fabricate the bearing support ourselves. See [Fabricating Bearings](#fabricating-bearings) for some approaches that are more realistic with 3D-printed parts.
+
+## Fabricating Bearings
+
+Bearings with rollers are difficult to fabricate ourselves. 3D-printed versions exist, for example this [parametric slewing bearing design](https://www.instructables.com/Create-a-Parametric-3d-printable-Slew-Bearing-With/), which lets you modify the dimensions to fit your design. However, it is difficult to achieve a stiff bearing that still rotates well with 3D-printed races and rollers.
 
 [Download Slewing Bearing](https://content.instructables.com/F7B/FGGK/J3OPQDLL/F7BFGGKJ3OPQDLL.f3d){: .btn .btn-blue}
 
@@ -52,6 +65,17 @@ Because of these manufacturing constraints, it can be more attractive to make V-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0KhV6JW2sHg" title="3D printed bearing example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NIIVZcgJWPs" title="3D printed bearing example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Mounting Dynamixel Motors
+
+When mounting printed parts to Dynamixel motors, check the [custom frame assembly](https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/#custom-frame-assembly) section in the Dynamixel manual. The side tabs on the XM430-W350-T have M2.5 threads with a maximum depth of 3mm. Screwing anything deeper into the tabs can destroy the motor. We have M2.5 screws ([DIN912](https://www.mcmaster.com/products/socket-head-cap-screws/specifications-met~din-912/18-8-stainless-steel-socket-head-screws-11/thread-size~m2-5/threading~fully-threaded/)) of length 8mm, 10mm and 20mm, so make sure your design fits the screws we have available.
+
+Think also about the tolerances of the 3D printer when designing motor attachments. It is often a good idea to avoid over-constraining the motor too much, and/or to add some tolerance to the attachment instead of working with the motor's exact dimensions. You are aiming for a snug fit, not a press fit -- screws will hold the motor in place.
+
+The technical drawings of the motors as well as CAD-models can be found in the Drawings section of the Dynamixel manuals. For importing the CAD files into Fusion, download the `.stp` file and upload it into your Fusion project.
+
+[XM430-W350-T Drawings](https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/#drawings){: .btn .btn-blue}
+[XM540-W150-T Drawings](https://emanual.robotis.com/docs/en/dxl/x/xm540-w150/#drawings){: .btn .btn-blue}
 
 ## End Effector
 ### Pen Mount

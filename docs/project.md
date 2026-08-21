@@ -131,7 +131,8 @@ A lift counts as failed if the payload is not lifted and held above the required
 
 
 ## Base Plate
-Each group gets a standardized base plate for mounting the robot on. The mounting holes for the robot are in a 150mm square pattern, M6 screws will be inserted from the bottom of the plate. The plate will also be used as the arena for the competition at the end of the semester. Therefore, it is important that the robot can reach all the corners of the plate.  
+Each group gets a standardized base plate for mounting the robot on. The mounting holes for the robot are in a 150mm square pattern, M6 screws will be inserted from the bottom of the plate. Fitting these mounting holes is a design constraint for the robot base. The plate will also be used as the arena for the competition at the end of the semester. Therefore, it is important that the robot can reach all the corners of the plate.
+
 [Download Base Plate](https://a360.co/45MN0mZ){: .btn .btn-blue}
 <iframe src="https://myhvl14.autodesk360.com/shares/public/SH512d4QTec90decfa6e3b9f03e7d311b26e?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
 
