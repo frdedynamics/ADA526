@@ -26,7 +26,7 @@ On the other side of the link, you must provide the mounting holes for the pen m
 ## Dynamixel Horn Mounting
 For this hand-in, your link mounts to the servo horn, not to the side tabs of the motor. The horn side of your link should be designed such that the last joint axis points down in the home configuration, as shown in the figures above.
 
-The servo horn interface is a circular pattern of 8 M2 threads, evenly distributed on a 16mm diameter circle. The maximum screw-in depth is 2mm. The mounting hub in the center of the horn has a diameter of 8mm and must be spared out in your link design.
+The servo horn has 8 M2 threaded holes, evenly spaced on a 16mm diameter circle. The maximum screw-in depth is 2mm. The mounting hub in the center of the horn has a diameter of 8mm and must be spared out in your link design.
 
 Think also about the tolerances of the 3D printer when designing the horn attachment. You are aiming for a snug fit, not a press fit -- screws will hold the link in place.
 
