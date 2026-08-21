@@ -24,14 +24,16 @@ On the other side of the link, you must provide the mounting holes for the pen m
 <img src="../../assets/images/link4_hand_in_1_back_marked.png" width="500" />
 
 ## Dynamixel Horn Mounting
-For this hand-in, your link mounts to the servo horn, not to the side tabs of the motor. Use the motor and horn geometry from the Dynamixel drawings/CAD models to place the mounting holes correctly. The horn side of your link should be designed such that the last joint axis points down in the home configuration, as shown in the figures above.
+For this hand-in, your link mounts to the servo horn, not to the side tabs of the motor. The horn side of your link should be designed such that the last joint axis points down in the home configuration, as shown in the figures above.
+
+The servo horn interface is a circular pattern of 8 M2 threads, evenly distributed on a 16mm diameter circle. The maximum screw-in depth is 2mm. The mounting hub in the center of the horn has a diameter of 8mm and must be spared out in your link design.
 
 Think also about the tolerances of the 3D printer when designing the horn attachment. You are aiming for a snug fit, not a press fit -- screws will hold the link in place.
 
-The technical drawings of the motors as well as CAD-models can be found in the Drawings section of the Dynamixel manuals. For importing the CAD files, download the `.stp` file and upload it into your Fusion project.
+The technical drawing and CAD model of the XM430-W350-T can be downloaded directly below. For importing the CAD file into Fusion, download the `.stp` file and upload it into your Fusion project.
 
-[XM430-W350-T Drawings](https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/#drawings){: .btn .btn-blue}
-[XM540-W150-T Drawings](https://emanual.robotis.com/docs/en/dxl/x/xm540-w150/#drawings){: .btn .btn-blue}
+[XM430-W350-T Drawing PDF](http://www.robotis.com/service/download.php?no=157){: .btn .btn-blue}
+[XM430-W350-T STEP Model](http://www.robotis.com/service/download.php?no=158){: .btn .btn-blue}
 
 ## Pen Mount Interface
 The pen mount is the end-effector used in the competition. Your link must provide the mounting holes for this pen mount on the opposite side from the servo horn. Use the drawing below to place the holes correctly.
@@ -56,4 +58,3 @@ You have to print your link to take a photo, but you don't have to submit the ph
 
 **Deadline: Check Canvas**  
 **Submit files on Canvas. This is an individual hand-in.**
-
