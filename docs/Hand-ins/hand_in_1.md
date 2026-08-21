@@ -38,9 +38,9 @@ The pen mount is the end-effector used in the competition. Your link must provid
 
 [Download Pen Mount](../../assets/cad/pen_mount.f3d){: .btn .btn-blue}
 
-<object data="../../assets/images/Pen Mount Drawing v4.pdf" type="application/pdf" width="800px" height="550px">
-    <embed src="../../assets/images/Pen Mount Drawing v4.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../../assets/images/Pen Mount Drawing v4.pdf">Download PDF</a>.</p>
+<object data="../../assets/images/Pen Mount Drawing new dim v2.pdf" type="application/pdf" width="800px" height="550px">
+    <embed src="../../assets/images/Pen Mount Drawing new dim v2.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../../assets/images/Pen Mount Drawing new dim v2.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
