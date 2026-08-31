@@ -42,6 +42,15 @@ Frikk Fossdal has his own website for ADA525 where he has information on 3D prin
 ## Filament
 We have mostly PLA in stock. If you want to use other materials, please contact staff.
 
+For an overview and comparison over different filaments for FDM printing have a look at the excellent guides from Prusa and Bambulab.
+
+[Prusa Filament Guide](https://help.prusa3d.com/filament-material-guide){: .btn .btn-blue}
+{: .text-center }
+
+[Bambu Lab Filament Guide](https://bambulab.com/en-eu/filament/guide){: .btn .btn-blue}
+{: .text-center }
+
+
 ## Where to find the printers
 Bergen: Space 162 in K2
 
