@@ -24,6 +24,10 @@ The blog post linked below gives a very good and thorough overview of design for
 [Design for 3D-Printing](https://blog.rahix.de/design-for-3d-printing/){: .btn .btn-blue}
 {: .text-center }
 
+You can also have a look at this teaching and learning package which provides an introduction to additive manufacturing methods, their advantages and limitations, and how the properties of printed objects are affected by varying printing parameters.
+
+[Learning package on additive manufacturing](https://www.doitpoms.ac.uk/tlplib/add_manuf/index.php){: .btn .btn-blue}
+{: .text-center }
 
 ## Variable Infill in Bambu Studio
 You can easily split your model into parts and adjust settings locally in Bambu Studio. This is useful for minimizing the weight and material use of parts that require strength only in certain areas. 
