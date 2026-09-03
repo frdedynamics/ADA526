@@ -2,6 +2,7 @@
 title: Robot Gallery
 layout: default
 nav_order: 5
+has_children: true
 has_toc: false
 ---
 
@@ -10,30 +11,50 @@ has_toc: false
 
 Here are some pictures of robots built by students in recent years. For inspiration and to learn from.
 
----
+<style>
+  .gallery-year-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
 
-<iframe src="https://myhvl50.autodesk360.com/shares/public/SH28cd1QT2badd0ea72b62c56bb36ba97371?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+  .gallery-year-card {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #eeebee;
+    border-radius: 4px;
+    color: inherit;
+    text-decoration: none;
+    background: #fff;
+  }
 
-![Robot 1](../assets/images/robot_gallery/P9046048.JPG)
-![Robot 1](../assets/images/robot_gallery/P9046052.JPG)
-![Robot 1](../assets/images/robot_gallery/P9046054.JPG)
-![Robot 1](../assets/images/robot_gallery/P9046055.JPG)
-![Robot 1](../assets/images/robot_gallery/P9046060.JPG)
-![Robot 1](../assets/images/robot_gallery/P9046062.JPG)
-![Robot 1](../assets/images/robot_gallery/P9046067.JPG)
+  .gallery-year-card:hover {
+    text-decoration: none;
+  }
 
----
+  .gallery-year-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
 
-<iframe src="https://myhvl50.autodesk360.com/shares/public/SH28cd1QT2badd0ea72beb8d6887335f1561?mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+  .gallery-year-card span {
+    display: block;
+    padding: 0.75rem;
+    font-weight: 600;
+  }
+</style>
 
-![Robot 2](../assets/images/robot_gallery/P9046068.JPG)
-![Robot 2](../assets/images/robot_gallery/P9046072.JPG)
-![Robot 2](../assets/images/robot_gallery/P9046073.JPG)
-![Robot 2](../assets/images/robot_gallery/P9046074.JPG)
-![Robot 2](../assets/images/robot_gallery/P9046075.JPG)
-![Robot 2](../assets/images/robot_gallery/P9046077.JPG)
-![Robot 2](../assets/images/robot_gallery/P9046080.JPG)
-![Robot 2](../assets/images/robot_gallery/P9046083.JPG)
-
----
+<div class="gallery-year-grid">
+  <a class="gallery-year-card" href="robot_gallery_2025.html">
+    <img src="../assets/images/robot_gallery/2025/20260824_133612.jpg" alt="Student robot from 2025" loading="lazy" decoding="async">
+    <span>2025 Robots</span>
+  </a>
+  <a class="gallery-year-card" href="robot_gallery_2023.html">
+    <img src="../assets/images/robot_gallery/2023/P9046048.JPG" alt="Student robot from 2023" loading="lazy" decoding="async">
+    <span>2023 Robots</span>
+  </a>
+</div>
 

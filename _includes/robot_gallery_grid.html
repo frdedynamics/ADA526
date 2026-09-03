@@ -1,0 +1,117 @@
+{% assign gallery_path = '/assets/images/robot_gallery/' | append: include.year | append: '/' %}
+{% assign gallery_images = site.static_files | where_exp: "file", "file.path contains gallery_path" | sort: "path" %}
+{% assign gallery_prefix = include.path_prefix | default: '..' %}
+{% assign gallery_alt = include.alt | default: 'Student robot' %}
+
+<style>
+  .robot-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0 2rem;
+  }
+
+  .robot-gallery-item {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #eeebee;
+    border-radius: 4px;
+    background: #f7f7f7;
+  }
+
+  .robot-gallery-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .robot-gallery-item:focus-visible {
+    outline: 3px solid #7253ed;
+    outline-offset: 2px;
+  }
+
+  .robot-lightbox {
+    max-width: 96vw;
+    max-height: 96vh;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .robot-lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.72);
+  }
+
+  .robot-lightbox-frame {
+    position: relative;
+  }
+
+  .robot-lightbox img {
+    display: block;
+    max-width: 96vw;
+    max-height: 90vh;
+    object-fit: contain;
+    background: #111;
+  }
+
+  .robot-lightbox-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.35rem 0.55rem;
+    border: 0;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #111;
+    cursor: pointer;
+  }
+</style>
+
+{% if gallery_images.size > 0 %}
+<div class="robot-gallery-grid" data-robot-gallery="{{ include.year }}">
+  {% for image in gallery_images %}
+    <a class="robot-gallery-item" href="{{ gallery_prefix }}{{ image.path }}" data-lightbox>
+      <img src="{{ gallery_prefix }}{{ image.path }}" alt="{{ gallery_alt }}" loading="lazy" decoding="async">
+    </a>
+  {% endfor %}
+</div>
+
+<dialog class="robot-lightbox" id="robot-lightbox-{{ include.year }}">
+  <div class="robot-lightbox-frame">
+    <button class="robot-lightbox-close" type="button">Close</button>
+    <img alt="">
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const gallery = document.querySelector('[data-robot-gallery="{{ include.year }}"]');
+  const dialog = document.getElementById('robot-lightbox-{{ include.year }}');
+  if (!gallery || !dialog || typeof dialog.showModal !== 'function') return;
+
+  const lightboxImage = dialog.querySelector('img');
+  const closeButton = dialog.querySelector('.robot-lightbox-close');
+
+  gallery.querySelectorAll('a[data-lightbox]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const thumbnail = link.querySelector('img');
+      lightboxImage.src = link.href;
+      lightboxImage.alt = thumbnail ? thumbnail.alt : '';
+      dialog.showModal();
+    });
+  });
+
+  closeButton.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    lightboxImage.removeAttribute('src');
+  });
+})();
+</script>
+{% else %}
+No gallery images found for {{ include.year }}.
+{% endif %}
