@@ -11,3 +11,6 @@ vendor/
 
 # Ignore raw images
 assets/images/raw/
+
+# Local source material used while preparing course pages
+local_material/
