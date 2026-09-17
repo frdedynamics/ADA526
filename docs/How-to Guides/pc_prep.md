@@ -70,5 +70,5 @@ The RealSense driver itself is already installed on the VM, but we noticed that 
 [Bambu Studio]: https://bambulab.com/en/download/studio
 [VMWare Player (Windows)]: https://archive.org/download/vmware-player-full-17.5.0-22583795_202402/VMware-player-full-17.5.0-22583795.exe
 [VMWare Fusion (Mac)]: https://archive.org/download/vmware-fusion-13.6.4-24832108-universal/VMware-Fusion-13.6.4-24832108_universal.dmg
-[virtual machine]: https://filesender.sikt.no/?s=download&token=947c90e9-451b-4fae-a025-34f07374bc75
+[virtual machine]: https://filesender.sikt.no/?s=download&token=5ef268c2-c11f-442b-bb49-275abe9889db
 [adatools]: https://github.com/frdedynamics/adatools
