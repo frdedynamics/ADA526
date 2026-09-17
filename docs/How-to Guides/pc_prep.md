@@ -12,7 +12,7 @@ On your Windows PC:
     - Create an Autodesk account with your HVL email and [verify your student status](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-verify-your-student-eligibility.html).
 - Install [Bambu Studio]
 - Install [VMWare Player (Windows)] or [VMWare Fusion (Mac)]. 
-    - Download our Ubuntu 20.04 [virtual machine] (link valid until 17.9.2026) for VMWare Player with pre-installed VSCode, ROS2, Robotics toolbox, Dynamixel Wizard and Dynamixel SDK.
+    - Download our Ubuntu 20.04 [virtual machine] (link valid until 17.10.2026) for VMWare Player with pre-installed VSCode, ROS2, Robotics toolbox, Dynamixel Wizard and Dynamixel SDK.
     - Unzip the virtual machine to a folder of your choice.
     - In the VMWare Player, open the virtual machine `ctrl+O` by selecting the `.vmx` file in the folder you unzipped the virtual machine to.
     - Start the virtual machine by clicking `Play virtual machine`.
