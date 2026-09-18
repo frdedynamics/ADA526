@@ -27,16 +27,30 @@ The detailed documentation of the control table of the two servo models we use c
 ## Connection and Configuration
 To get started you need to connect all servos together and configure their ID's. The servos need unique ID's such that we can talk to them individually while they are connected in series (daisy chain) to the TTL bus.
 
+{: .note}
+>The virtual machine needs a USB controller before it can detect the U2D2 or any other USB device. This controller is normally already available. If it is missing from the virtual machine settings, add it as follows:
+>
+>1. Open the virtual machine settings.
+>2. On the **Hardware** tab, click **Add...**.
+>3. Select **USB Controller** and click **Finish**.
+>4. Select the new USB controller in the hardware list.
+>5. Set **USB compatibility** to **USB 3.1**.
+>6. Click **OK** to save the settings.
+>
+><img src="../../assets/images/vm_add_usb_controller.gif" alt="Adding a USB controller to the virtual machine and selecting USB 3.1 compatibility" width="900" height="563" loading="lazy">
+>
+>_Adding a USB controller and selecting USB 3.1 compatibility in VMware._
+
 1. Connect the TTL port on the U2D2 to one of the TTL ports on the Power hub. Connect the power hub to the power supply and connect the U2D2 to your computer with a USB cable.
 
     {: .note}
     >When connecting the U2D2 to your computer, make sure the USB connection is "forwarded" to the virtual machine. When connecting a USB device, a dialog pops up in the VM asking whether to connect the device to the VM or the host. Select the VM.  
-    You can manage the connected devices in the menu bar of the VM window. Make sure that the U2D2 (USB serial converter) and eventual dongles/adapters are connected to the VM.
+    You can manage the connected devices in the menu bar of the VM window. Make sure that the U2D2 (USB serial converter) and any dongles or adapters are connected to the VM.
     >
     >![VM USB devices](../../assets/images/vm_usb.png)
     >{: .text-center}
 
-2. Connect a motor to one of the two remaining TLL ports on the Power hub. Switch on the Power hub. Open the Dynamixel Wizard, go to _"Options"_ and select the USB port to scan that says _"USB Serial Converter"_.
+2. Connect a motor to one of the two remaining TTL ports on the Power hub. Switch on the Power hub. Open the Dynamixel Wizard, go to _"Options"_ and select the USB port to scan that says _"USB Serial Converter"_.
     Run _"Scan"_. The motor should show up and you should see its [_control table_](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/#dynamixel-control-table).
     At Address `07` you can see the current ID of the motor (`1` by default).
     
