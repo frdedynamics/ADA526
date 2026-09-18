@@ -1,0 +1,58 @@
+<div class="kinematics-tool dh-transform-demo" id="dh-transform-demo">
+  <div class="dh-builder-toolbar">
+    <div class="dh-link-tabs" data-dh-link-tabs role="tablist" aria-label="DH links"></div>
+    <div class="dh-builder-actions">
+      <button type="button" data-dh-reset>Reset</button>
+      <button type="button" data-dh-remove disabled>Remove last</button>
+      <button type="button" data-dh-add>Add link</button>
+    </div>
+  </div>
+
+  <div class="kinematics-step-buttons" role="group" aria-label="DH transformation step">
+    <button type="button" data-dh-step="0">Start</button>
+    <button type="button" data-dh-step="1">1. Rotate &theta;</button>
+    <button type="button" data-dh-step="2">2. Offset d</button>
+    <button type="button" data-dh-step="3">3. Length a</button>
+    <button type="button" data-dh-step="4" class="is-active">4. Twist &alpha;</button>
+  </div>
+
+  <div class="dh-transform-demo__layout">
+    <div class="dh-transform-demo__plot" data-dh-plot role="img" aria-label="Interactive three-dimensional DH transformation"></div>
+
+    <div class="kinematics-controls">
+      <label class="kinematics-slider">
+        <span><span>Joint angle &theta;</span><output data-dh-output="theta">35&deg;</output></span>
+        <input type="range" min="-180" max="180" step="1" value="35" data-dh-param="theta">
+      </label>
+      <label class="kinematics-slider">
+        <span><span>Link offset d</span><output data-dh-output="d">0.65</output></span>
+        <input type="range" min="-1" max="1" step="0.01" value="0.65" data-dh-param="d">
+      </label>
+      <label class="kinematics-slider">
+        <span><span>Link length a</span><output data-dh-output="a">1.10</output></span>
+        <input type="range" min="-1.5" max="1.5" step="0.01" value="1.1" data-dh-param="a">
+      </label>
+      <label class="kinematics-slider">
+        <span><span>Link twist &alpha;</span><output data-dh-output="alpha">55&deg;</output></span>
+        <input type="range" min="-180" max="180" step="1" value="55" data-dh-param="alpha">
+      </label>
+    </div>
+  </div>
+
+  <p class="kinematics-status" data-dh-description aria-live="polite"></p>
+  <div class="dh-chain-summary">
+    <table>
+      <thead>
+        <tr>
+          <th>Link</th>
+          <th>&theta;</th>
+          <th>d</th>
+          <th>a</th>
+          <th>&alpha;</th>
+        </tr>
+      </thead>
+      <tbody data-dh-summary></tbody>
+    </table>
+  </div>
+  <noscript><p>JavaScript is required to use the interactive DH figure.</p></noscript>
+</div>

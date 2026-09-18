@@ -1,0 +1,534 @@
+.kinematics-tool {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5rem 0 2rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.dh-builder-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem;
+  border-bottom: 1px solid #d1d5db;
+  background: #fff;
+}
+
+.dh-link-tabs,
+.dh-builder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.dh-link-tabs button,
+.dh-builder-actions button {
+  min-height: 34px;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #b8c0ca;
+  border-radius: 4px;
+  background: #fff;
+  color: #374151;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.dh-link-tabs button:hover,
+.dh-link-tabs button:focus-visible,
+.dh-builder-actions button:hover,
+.dh-builder-actions button:focus-visible {
+  background: #f3f4f6;
+}
+
+.dh-link-tabs button.is-active {
+  border-color: #2563a6;
+  background: #eaf2fb;
+  color: #174f80;
+  font-weight: 600;
+}
+
+.dh-link-tabs button:disabled,
+.dh-builder-actions button:disabled,
+.kinematics-step-buttons button:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.kinematics-step-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-bottom: 1px solid #d1d5db;
+}
+
+.kinematics-step-buttons button {
+  min-height: 44px;
+  padding: 0.55rem 0.35rem;
+  border: 0;
+  border-right: 1px solid #d1d5db;
+  border-radius: 0;
+  background: #f3f4f6;
+  color: #374151;
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.kinematics-step-buttons button:last-child {
+  border-right: 0;
+}
+
+.kinematics-step-buttons button:hover,
+.kinematics-step-buttons button:focus-visible {
+  background: #e5e7eb;
+}
+
+.kinematics-step-buttons button.is-active {
+  background: #2563a6;
+  color: #fff;
+  font-weight: 600;
+}
+
+.dh-transform-demo__layout,
+.planar-fk-demo__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+}
+
+.dh-transform-demo__layout > *,
+.planar-fk-demo__layout > * {
+  min-width: 0;
+}
+
+.dh-transform-demo__plot {
+  width: 100%;
+  height: 460px;
+  min-width: 0;
+}
+
+.kinematics-controls {
+  min-width: 0;
+  padding: 1rem;
+  border-left: 1px solid #d1d5db;
+  background: #f9fafb;
+}
+
+.kinematics-slider {
+  display: block;
+  margin-bottom: 1.15rem;
+}
+
+.kinematics-slider > span {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+  color: #374151;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.kinematics-slider output {
+  min-width: 3.5rem;
+  color: #111827;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.kinematics-slider input[type="range"] {
+  width: 100%;
+  accent-color: #2563a6;
+}
+
+.kinematics-slider input[type="range"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.kinematics-slider.is-disabled > span,
+.kinematics-slider.is-disabled output {
+  color: #9ca3af;
+}
+
+.kinematics-status {
+  min-height: 3.25rem;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  border-top: 1px solid #d1d5db;
+  color: #374151;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+
+.dh-chain-summary {
+  max-width: 100%;
+  overflow-x: auto;
+  border-top: 1px solid #d1d5db;
+}
+
+.dh-chain-summary table {
+  width: 100%;
+  min-width: 100%;
+  margin: 0;
+  table-layout: fixed;
+}
+
+.dh-chain-summary th,
+.dh-chain-summary td {
+  min-width: 0;
+  padding: 0.45rem 0.6rem;
+  text-align: right;
+}
+
+.dh-chain-summary th:first-child,
+.dh-chain-summary td:first-child {
+  width: 14%;
+  text-align: left;
+}
+
+.dh-chain-summary th:nth-child(2),
+.dh-chain-summary td:nth-child(2) {
+  width: 34%;
+}
+
+.dh-chain-summary th:nth-child(n + 3),
+.dh-chain-summary td:nth-child(n + 3) {
+  width: 17.33%;
+}
+
+.dh-summary-angle output {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dh-summary-angle input {
+  display: block;
+  width: 100%;
+  margin: 0;
+  accent-color: #2563a6;
+}
+
+.dh-chain-summary tr.is-active {
+  background: #eef5fb;
+}
+
+.kinematics-example-details {
+  margin: -0.75rem 0 2rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.kinematics-example-details summary {
+  padding: 0.75rem 1rem;
+  color: #174f80;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.kinematics-example-details[open] summary {
+  border-bottom: 1px solid #d1d5db;
+}
+
+.kinematics-example-details > div {
+  padding: 0.25rem 1rem 1rem;
+}
+
+.kinematics-example-details .kinematics-table-scroll {
+  margin: 1rem 0;
+}
+
+.kinematics-fallback {
+  max-width: 32rem;
+  margin: 4rem auto;
+  padding: 1rem;
+  color: #4b5563;
+}
+
+.planar-fk-demo__stage {
+  min-width: 0;
+  background: #fff;
+}
+
+.planar-fk-demo__stage svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 680 / 420;
+}
+
+.kinematics-example-figure {
+  max-width: 44rem;
+  margin: 1.5rem auto 2rem;
+}
+
+.kinematics-example-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.kinematics-example-figure figcaption {
+  margin-top: 0.5rem;
+  color: #5c6370;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.planar-grid line {
+  stroke: #edf0f2;
+  stroke-width: 1;
+}
+
+.planar-grid .planar-grid-axis {
+  stroke: #aeb6bf;
+  stroke-width: 1.5;
+}
+
+.planar-link {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 16;
+}
+
+.planar-link--one {
+  stroke: #d97706;
+}
+
+.planar-link--two {
+  stroke: #2563a6;
+}
+
+.planar-joint {
+  fill: #fff;
+  stroke: #111827;
+  stroke-width: 4;
+}
+
+.planar-tcp {
+  fill: #111827;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.planar-link-label {
+  fill: #111827;
+  font-size: 15px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 4px;
+  text-anchor: middle;
+}
+
+.planar-frame-axis {
+  stroke-width: 3;
+}
+
+.planar-frame-axis--x {
+  stroke: #c2413b;
+}
+
+.planar-frame-axis--y {
+  stroke: #16865c;
+}
+
+.planar-frame-label,
+.planar-frame-name,
+.planar-angle-label {
+  font-size: 13px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 4px;
+}
+
+.planar-frame-label--x {
+  fill: #a3312d;
+}
+
+.planar-frame-label--y {
+  fill: #126b4a;
+}
+
+.planar-frame-name {
+  fill: #374151;
+}
+
+.planar-z-axis {
+  fill: #fff;
+  stroke: #2563a6;
+  stroke-width: 2;
+}
+
+.planar-z-axis-dot {
+  fill: #2563a6;
+}
+
+.planar-angle-arc {
+  fill: none;
+  stroke: #6b7280;
+  stroke-width: 2;
+  stroke-dasharray: 4 3;
+}
+
+.planar-angle-label {
+  fill: #4b5563;
+  text-anchor: middle;
+}
+
+.planar-pose-readout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.5rem 0 0;
+  border-top: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.planar-pose-readout div {
+  padding: 0.55rem 0.25rem;
+  text-align: center;
+}
+
+.planar-pose-readout span {
+  display: block;
+  color: #6b7280;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.planar-pose-readout output {
+  display: block;
+  min-width: 0;
+  margin-top: 0.15rem;
+  color: #111827;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.planar-matrix-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #d1d5db;
+}
+
+.planar-matrix-row section {
+  min-width: 0;
+  padding: 0.8rem;
+  border-right: 1px solid #d1d5db;
+  overflow-x: auto;
+}
+
+.planar-matrix-row section:last-child {
+  border-right: 0;
+}
+
+.planar-matrix-title {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.numeric-matrix {
+  width: 100%;
+  min-width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  border-left: 2px solid #4b5563;
+  border-right: 2px solid #4b5563;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  table-layout: fixed;
+}
+
+.numeric-matrix td {
+  width: 25%;
+  min-width: 0;
+  padding: 0.24rem 0.2rem;
+  border: 0;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.main-content .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.2rem;
+}
+
+.kinematics-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.kinematics-table-scroll table {
+  width: 100%;
+  min-width: 100%;
+  margin-bottom: 0;
+}
+
+.kinematics-table-scroll th,
+.kinematics-table-scroll td {
+  min-width: 0;
+}
+
+@media (max-width: 800px) {
+  .dh-builder-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dh-builder-actions button {
+    flex: 1 1 auto;
+  }
+
+  .kinematics-step-buttons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kinematics-step-buttons button {
+    border-bottom: 1px solid #d1d5db;
+  }
+
+  .kinematics-step-buttons button:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .dh-transform-demo__layout,
+  .planar-fk-demo__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .dh-transform-demo__plot {
+    height: 380px;
+  }
+
+  .kinematics-controls {
+    border-top: 1px solid #d1d5db;
+    border-left: 0;
+  }
+
+  .planar-matrix-row {
+    grid-template-columns: 1fr;
+  }
+
+  .planar-matrix-row section {
+    border-right: 0;
+    border-bottom: 1px solid #d1d5db;
+  }
+
+  .planar-matrix-row section:last-child {
+    border-bottom: 0;
+  }
+}

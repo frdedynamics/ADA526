@@ -1,0 +1,48 @@
+<div class="kinematics-tool planar-fk-demo" id="planar-fk-demo">
+  <div class="planar-fk-demo__layout">
+    <div class="planar-fk-demo__stage">
+      <svg viewBox="0 0 680 420" role="img" aria-label="Interactive two-link planar robot with coordinate frames"></svg>
+    </div>
+
+    <div class="kinematics-controls">
+      <label class="kinematics-slider">
+        <span><span>Joint angle &theta;<sub>1</sub></span><output data-planar-output="theta1">30&deg;</output></span>
+        <input type="range" min="-180" max="180" step="1" value="30" data-planar-param="theta1">
+      </label>
+      <label class="kinematics-slider">
+        <span><span>Joint angle &theta;<sub>2</sub></span><output data-planar-output="theta2">45&deg;</output></span>
+        <input type="range" min="-180" max="180" step="1" value="45" data-planar-param="theta2">
+      </label>
+      <label class="kinematics-slider">
+        <span><span>Link length a<sub>1</sub></span><output data-planar-output="a1">1.10</output></span>
+        <input type="range" min="0.5" max="1.5" step="0.05" value="1.1" data-planar-param="a1">
+      </label>
+      <label class="kinematics-slider">
+        <span><span>Link length a<sub>2</sub></span><output data-planar-output="a2">0.85</output></span>
+        <input type="range" min="0.5" max="1.5" step="0.05" value="0.85" data-planar-param="a2">
+      </label>
+
+      <div class="planar-pose-readout" aria-label="End-effector pose">
+        <div><span>x</span><output data-planar-pose="x"></output></div>
+        <div><span>y</span><output data-planar-pose="y"></output></div>
+        <div><span>&phi;</span><output data-planar-pose="phi"></output></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="planar-matrix-row">
+    <section>
+      <p class="planar-matrix-title"><sup>0</sup>T<sub>1</sub></p>
+      <div data-planar-matrix="t1"></div>
+    </section>
+    <section>
+      <p class="planar-matrix-title"><sup>1</sup>T<sub>2</sub></p>
+      <div data-planar-matrix="t2"></div>
+    </section>
+    <section>
+      <p class="planar-matrix-title"><sup>0</sup>T<sub>2</sub></p>
+      <div data-planar-matrix="t02"></div>
+    </section>
+  </div>
+  <noscript><p>JavaScript is required to use the interactive planar-arm example.</p></noscript>
+</div>

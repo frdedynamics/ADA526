@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title description">
+  <title id="title">Coordinate frames of a two-link planar robot</title>
+  <desc id="description">A two-link planar robot showing frames zero, one, and two, link lengths a one and a two, and joint angles theta one and theta two.</desc>
+  <defs>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#374151"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b63b35"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#177653"/>
+    </marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #374151; }
+      .axis { fill: none; stroke-width: 2.5; }
+      .axis-x { stroke: #b63b35; marker-end: url(#arrow-red); }
+      .axis-y { stroke: #177653; marker-end: url(#arrow-green); }
+      .axis-label { font-size: 18px; font-weight: 700; }
+      .axis-label-x { fill: #9d302b; }
+      .axis-label-y { fill: #126543; }
+      .frame-label { font-size: 17px; font-weight: 700; }
+      .link-body { fill: none; stroke: #e5e7eb; stroke-linecap: round; stroke-width: 30; }
+      .link-center { fill: none; stroke: #6b7280; stroke-dasharray: 9 7; stroke-width: 2; }
+      .joint { fill: #fff; stroke: #374151; stroke-width: 3; }
+      .joint-center { fill: #2563a6; }
+      .angle { fill: none; stroke: #6b7280; stroke-width: 2; marker-end: url(#arrow-dark); }
+      .angle-label, .length-label { font-size: 20px; font-style: italic; }
+      .reference { fill: none; stroke: #9ca3af; stroke-dasharray: 6 5; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <line x1="120" y1="350" x2="690" y2="350" class="axis axis-x"/>
+  <line x1="120" y1="350" x2="120" y2="42" class="axis axis-y"/>
+  <text x="700" y="356" class="axis-label axis-label-x">x<tspan baseline-shift="sub" font-size="13">0</tspan></text>
+  <text x="105" y="35" class="axis-label axis-label-y">y<tspan baseline-shift="sub" font-size="13">0</tspan></text>
+
+  <line x1="120" y1="350" x2="390" y2="250" class="link-body"/>
+  <line x1="390" y1="250" x2="540" y2="75" class="link-body"/>
+  <line x1="120" y1="350" x2="390" y2="250" class="link-center"/>
+  <line x1="390" y1="250" x2="540" y2="75" class="link-center"/>
+
+  <line x1="390" y1="250" x2="510" y2="206" class="reference"/>
+  <line x1="390" y1="250" x2="508" y2="206" class="axis axis-x"/>
+  <line x1="390" y1="250" x2="354" y2="151" class="axis axis-y"/>
+  <text x="516" y="207" class="axis-label axis-label-x">x<tspan baseline-shift="sub" font-size="13">1</tspan></text>
+  <text x="337" y="145" class="axis-label axis-label-y">y<tspan baseline-shift="sub" font-size="13">1</tspan></text>
+
+  <line x1="540" y1="75" x2="595" y2="11" class="axis axis-x"/>
+  <line x1="540" y1="75" x2="489" y2="31" class="axis axis-y"/>
+  <text x="602" y="18" class="axis-label axis-label-x">x<tspan baseline-shift="sub" font-size="13">2</tspan></text>
+  <text x="468" y="29" class="axis-label axis-label-y">y<tspan baseline-shift="sub" font-size="13">2</tspan></text>
+
+  <path d="M 185 350 A 65 65 0 0 0 181 327" class="angle"/>
+  <text x="184" y="326" class="angle-label">θ<tspan baseline-shift="sub" font-size="14">1</tspan></text>
+  <path d="M 448 229 A 62 62 0 0 0 430 203" class="angle"/>
+  <text x="456" y="207" class="angle-label">θ<tspan baseline-shift="sub" font-size="14">2</tspan></text>
+
+  <text x="247" y="275" class="length-label">a<tspan baseline-shift="sub" font-size="14">1</tspan></text>
+  <text x="450" y="146" class="length-label">a<tspan baseline-shift="sub" font-size="14">2</tspan></text>
+
+  <circle cx="120" cy="350" r="19" class="joint"/>
+  <circle cx="390" cy="250" r="19" class="joint"/>
+  <circle cx="540" cy="75" r="12" class="joint"/>
+  <circle cx="120" cy="350" r="6" class="joint-center"/>
+  <circle cx="390" cy="250" r="6" class="joint-center"/>
+  <circle cx="540" cy="75" r="5" class="joint-center"/>
+
+  <text x="90" y="387" class="frame-label">{0}</text>
+  <text x="365" y="289" class="frame-label">{1}</text>
+  <text x="548" y="101" class="frame-label">{2}</text>
+</svg>
