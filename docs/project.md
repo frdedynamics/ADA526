@@ -121,13 +121,17 @@ In this challenge we test your robot's capabilities of vision-based control and 
 
 
 ### Challenge 3: Strength
-This challenges tests the physical strength of your robot. We will provide an end effector to which increasing payloads can be attached. The goal is to lift the payload at a distance of 45cm from the robot's base above a height of 15cm and hold it there for 5 seconds. The groups can decide how much weight they want to try to lift. Each group can freeze the payload they lifted successfully three times. At the end the highest frozen payload counts, and the group with the highest frozen payloads wins.
-A lift counts as failed if the payload is not lifted and held above the required height for the required time, if a motor overloads, if any part of the robot except its base touches the base plate or if the robot is touched by hand. This challenge has no requirements regarding the control of the robot. You can use any control strategy you want, including manual control/teleoperation. 
- - Each group announces a starting payload $$\geq 0$$g in advance.
- - One group is picked at random to start.
- - The group tries to lift their announced payload. If they succeed, they can decide to freeze the payload, or they can risk it and announce a higher payload without freezing, saving a freeze for later. Repeat until the group has used up all three freezes or fails to lift the announced payload.
- - The next group is picked at random and the process repeats.
- - The group with the highest frozen payload wins.
+This challenge tests the physical strength of your robot. Increasing payloads will be attached to the mounting bar that is part of the pen holder. The goal is to lift the payload while the mounting bar is above row 6, or a row with a smaller number, on the base plate. Row 6 is 45 cm away from the center of the base. The payload must be raised above a height of 15 cm and held there for 5 seconds. Each group has three attempts and can decide how much weight they want to try to lift in each attempt. Every successful lift is recorded, and the group's highest successful payload counts as its result.
+
+A lift counts as failed if the payload is not lifted and held above the required height for the required time, if a motor overloads, if any part of the robot except its base touches the base plate or if the robot is touched by hand. This challenge has no requirements regarding the control of the robot. You can use any control strategy you want, including manual control/teleoperation.
+
+ - The challenge is performed in three rounds, with one attempt per group in each round.
+ - Before each round, all groups submit their chosen payload privately to the instructors, written on a piece of paper. The choices are binding and are revealed only after all groups have submitted them.
+ - The starting group is picked at random for the first round. The starting position rotates between the groups in the following rounds.
+ - After a successful lift, the group must choose a higher payload for its next attempt.
+ - After a failed lift, the group can repeat the same payload once or choose a higher one, but it cannot reduce the payload. If the repeated attempt also fails, the same payload cannot be attempted again.
+ - Every successful lift is recorded immediately. A failed later attempt does not remove an earlier result.
+ - The group with the highest successful payload wins. Groups with the same highest payload share the same place.
 
 
 ## Base Plate
